@@ -15,7 +15,7 @@ def get_aws_session():
     """Create AWS session with explicit credentials"""
     session = boto3.Session(
         region_name=AWS_REGION,
-        aws_access_key_id='**',    # Replace with your key
+        aws_access_key_id='***',    # Replace with your key
         aws_secret_access_key='**' # Replace with your secret
     )
     return session

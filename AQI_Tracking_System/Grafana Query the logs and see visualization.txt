@@ -1,0 +1,13 @@
+Query to see your records:
+
+fields @timestamp, @message
+| parse @message /"window_end":\s*"(?<window_end>[^"]+)",\s*"record_count":\s*(?<record_count>\d+)/
+| display window_end, record_count
+| sort @timestamp desc
+| limit 20
+
+
+
+Basic Grafana Query 
+fields @timestamp, @message
+| limit 20

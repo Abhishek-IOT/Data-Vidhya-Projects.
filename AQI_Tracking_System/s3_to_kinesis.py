@@ -15,8 +15,8 @@ def get_aws_session():
     """Create AWS session with explicit credentials"""
     session = boto3.Session(
         region_name=AWS_REGION,
-        aws_access_key_id='***',    # Replace with your key
-        aws_secret_access_key='***' # Replace with your secret
+        aws_access_key_id='**',    # Replace with your key
+        aws_secret_access_key='**' # Replace with your secret
     )
     return session
 
@@ -55,8 +55,8 @@ def read_csv_from_s3(session, bucket, key):
             formatted_record = {
                 'location_id': row.get('location_id', ''),
                 'location_name': row.get('location_name', ''),
-                'parameter': row.get('parameter', ''),
-                'value': row.get('value', ''),
+                'parameter_of_AQI': row.get('parameter_of_AQI', ''),
+                'value_of_AQI': row.get('value_of_AQI', ''),
                 'unit': row.get('unit', ''),
                 'datetimeUtc': row.get('datetimeUtc', ''),
                 'datetimeLocal': row.get('datetimeLocal', ''),

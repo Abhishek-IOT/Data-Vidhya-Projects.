@@ -36,7 +36,7 @@ WITH (
 
 
 -- ========================================
--- 3) S3 Sink Table (JSON)
+-- 2) S3 Sink Table (JSON)
 -- ========================================
 CREATE TABLE aqi_s3_sink (
   location_id STRING,
@@ -64,37 +64,9 @@ WITH (
   'sink.rolling-policy.check-interval' = '10 s'
 );
 
--- ========================================
--- 4) Kinesis Sink Table (JSON)
--- ========================================
-CREATE TABLE aqi_kinesis_sink (
-  location_id STRING,
-  location_name STRING,
-  parameter_of_AQI STRING,
-  value_of_AQI DOUBLE,
-  unit STRING,
-  timezone STRING,
-  latitude DOUBLE,
-  longitude DOUBLE,
-  country_iso STRING,
-  isMobile BOOLEAN,
-  isMonitor BOOLEAN,
-  owner_name STRING,
-  provider STRING,
-  parameter_uppercase STRING,
-  value_in_fahrenheit DOUBLE
-)
-WITH (
-  'connector' = 'kinesis',
-  'stream' = 'AQI_Analyzied',
-  'aws.region' = 'us-east-1',
-  'format' = 'json',
-  'json.timestamp-format.standard' = 'ISO-8601',
-  'sink.partitioner' = 'random'
-);
 
 -- ========================================
--- 5) Insert into S3 Sink
+-- 3) Insert into S3 Sink
 -- ========================================
 INSERT INTO aqi_s3_sink
 SELECT
@@ -117,7 +89,7 @@ SELECT
 
 
 -- ========================================
--- 6) Insert into Kinesis Sink
+-- 4) Insert into Kinesis Sink
 -- ========================================
 
 CREATE TABLE aqi_logs_sink (
@@ -132,9 +104,9 @@ WITH (
   'sink.partitioner' = 'random'
 );
 
-
-Inserting records in sink table.
-
+-- ========================================
+-- 5) Inserting records in sink table.
+-- ========================================
 INSERT INTO aqi_logs_sink
 SELECT
   window_end,
@@ -143,4 +115,5 @@ FROM TABLE(
   TUMBLE(TABLE air_quality_source, DESCRIPTOR(processing_time), INTERVAL '1' MINUTE)
 )
 GROUP BY window_start, window_end;
+
 

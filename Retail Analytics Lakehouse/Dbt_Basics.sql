@@ -40,7 +40,7 @@ Athena_Connect:
       database: awsdatacatalog   # <-- always this
       schema: aqi_db             # <-- your Glue database
       region_name: us-east-1
-      s3_data_dir: s3://aws-glue-assets-640958509818-us-east-1/output/processed/
-      s3_staging_dir: s3://aws-glue-assets-640958509818-us-east-1/glue/
+      s3_data_dir: s3://aws-glue-assets/output/processed/
+      s3_staging_dir: s3://aws-glue-assets/glue/
       threads: 1
   target: dev

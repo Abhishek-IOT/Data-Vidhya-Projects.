@@ -3,8 +3,8 @@ from airflow.providers.amazon.aws.operators.emr import EmrServerlessStartJobOper
 from airflow.utils.dates import days_ago
 
 # 🔹 Replace with your details
-EMR_SERVERLESS_APP_ID = "00fvj9e1n07abe09"
-JOB_ROLE_ARN = "arn:aws:iam::640958509818:role/EMRServerlessJobExecutionRole"
+EMR_SERVERLESS_APP_ID = "00fvktfvpj62n509"
+JOB_ROLE_ARN = "arn:aws:iam::640958509818:role/service-role/AmazonEMR-ExecutionRole-1757850783950"
 S3_SCRIPT_PATH = "s3://aws-glue-assets-640958509818-us-east-1/glue/spark_job.py"
 S3_OUTPUT_PATH = "s3://aws-glue-assets-640958509818-us-east-1/output/"
 S3_LOGS_PATH = "s3://aws-glue-assets-640958509818-us-east-1/emr-logs/"

@@ -1,0 +1,38 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "MSK Serverless Cluster",
+  "Resources": {
+    "MSKServerlessCluster": {
+      "Type": "AWS::MSK::ServerlessCluster",
+      "Properties": {
+        "ClusterName": "Kafka-Production",
+        "VpcConfigs": [
+          {
+            "SubnetIds": [
+              "subnet-xxxx",
+              "subnet-xxxx"
+            ],
+            "SecurityGroups": [
+              "sg-xxxx"
+            ]
+          }
+        ],
+        "ClientAuthentication": {
+          "Sasl": {
+            "Iam": {
+              "Enabled": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "MSKServerlessClusterArn": {
+      "Description": "ARN of the MSK Serverless Cluster",
+      "Value": {
+        "Ref": "MSKServerlessCluster"
+      }
+    }
+  }
+}

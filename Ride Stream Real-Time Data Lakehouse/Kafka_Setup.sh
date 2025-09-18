@@ -3,7 +3,7 @@
 sudo yum -y install java-11
 
 #Installing Python pip
-sudo yum install python-pip
+sudo yum -y install python-pip
 
 #Installing Kafka 
 wget https://archive.apache.org/dist/kafka/2.8.1/kafka_2.12-2.8.1.tgz

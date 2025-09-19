@@ -1,0 +1,29 @@
+{
+  "Parameters": {
+    "JobName": {
+      "Type": "String",
+      "Default": "Raw2Ref"
+    }
+  },
+  "Resources": {
+    "MyGlueJob": {
+      "Type": "AWS::Glue::Job",
+      "Properties": {
+        "Name": {
+          "Ref": "JobName"
+        },
+        "Role": "arn:aws:iam::123456789091:role/service-role/AWSGlueServiceRole-AQI_DATA",
+        "Command": {
+          "Name": "glueetl",
+          "ScriptLocation": "s3://aws-glue-assets-123456789091-us-east-1/glue/glue_etl.py"
+        },
+        "DefaultArguments": {
+          "--job-bookmark-option": "job-bookmark-enable"
+        },
+        "GlueVersion": "4.0",
+        "WorkerType": "G.1X",
+        "NumberOfWorkers": 2
+      }
+    }
+  }
+}

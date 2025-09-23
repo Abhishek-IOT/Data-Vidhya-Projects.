@@ -17,6 +17,9 @@ pip install dbt-core dbt-athena
 
 sudo yum install git
 
+#Creation of Dbt project we need to run command and place the details there.
+dbt init
+
 #Creation of Connection : You need to go to the folder where the project.yml folder is there then run this 
 
 dbt debug

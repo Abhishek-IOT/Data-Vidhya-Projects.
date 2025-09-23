@@ -8,7 +8,7 @@ input_path = "s3://aws-glue-assets/input/run-*"
 dim_output = "s3://aws-glue-assets/output/processed/dimensions/"
 fact_output = "s3://aws-glue-assets/output/processed/facts/"
 
-# ✅ Read CSV
+#  Read CSV
 df = spark.read.csv(input_path, header=True, inferSchema=True)
 
 # --- Step 1: Dimensions with surrogate keys ---
@@ -61,4 +61,4 @@ fact_trips = (
 
 fact_trips.write.mode("overwrite").parquet(fact_output + "fact_trips/")
 
-print("✅ Dimensions and facts with surrogate keys written to S3")
+print(" Dimensions and facts with surrogate keys written to S3")

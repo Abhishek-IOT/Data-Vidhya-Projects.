@@ -6,7 +6,7 @@ import random
 from datetime import datetime, timedelta
 
 topicname = 'greentaxi'
-BROKERS = 'boot-ynu1hzcg.c1.kafka-serverless.us-east-1.amazonaws.com:9098'
+BROKERS = 'boot-4vl3tyer.c1.kafka-serverless.us-east-1.amazonaws.com:9098'
 region = 'us-east-1'
 
 class MSKTokenProvider(AbstractTokenProvider):
@@ -35,53 +35,55 @@ producer = KafkaProducer(
     sasl_oauth_token_provider=tp,
 )
 
-# NYC boroughs and locations
-boroughs = ['Manhattan', 'Brooklyn', 'Queens', 'Bronx', 'Staten Island']
-manhattan_locations = ['Upper East Side', 'Upper West Side', 'Midtown', 'Downtown', 'Chelsea', 'Harlem']
-brooklyn_locations = ['Williamsburg', 'Park Slope', 'DUMBO', 'Brooklyn Heights', 'Bushwick']
-queens_locations = ['Astoria', 'Long Island City', 'Flushing', 'Jackson Heights']
-bronx_locations = ['Yankee Stadium', 'Fordham', 'Pelham Bay']
-staten_island_locations = ['St. George', 'Tottenville', 'New Dorp']
+# NYC cities (boroughs) with short names
+cities = ['Manhattan', 'Brooklyn', 'Queens', 'Bronx', 'Staten Island']
 
-# Payment types
-payment_types = ['Credit card', 'Cash', 'No charge', 'Dispute', 'Unknown']
+# Locations with short names
+manhattan_locations = ['UES', 'UWS', 'Midtown', 'Downtown', 'Chelsea', 'Harlem']
+brooklyn_locations = ['Williamsburg', 'Park Slope', 'DUMBO', 'Bk Heights', 'Bushwick']
+queens_locations = ['Astoria', 'LIC', 'Flushing', 'J Heights']
+bronx_locations = ['Yankees', 'Fordham', 'Pelham']
+staten_island_locations = ['St George', 'Tottenville', 'New Dorp']
 
-# Rate codes
-rate_codes = ['Standard', 'JFK', 'Newark', 'Nassau/Westchester', 'Negotiated', 'Group ride']
+# Payment types with short names
+payment_types = ['Credit', 'Cash', 'No charge', 'Dispute', 'Unknown']
 
-# Trip types
-trip_types = ['Street-hail', 'Dispatch']
+# Rate codes with short names
+rate_codes = ['Standard', 'JFK', 'Newark', 'Nassau', 'Negotiated', 'Group']
 
-def get_pickup_location(borough):
-    if borough == 'Manhattan':
+# Trip types with short names
+trip_types = ['Street', 'Dispatch']
+
+def get_pickup_location(city):
+    if city == 'Manhattan':
         return random.choice(manhattan_locations)
-    elif borough == 'Brooklyn':
+    elif city == 'Brooklyn':
         return random.choice(brooklyn_locations)
-    elif borough == 'Queens':
+    elif city == 'Queens':
         return random.choice(queens_locations)
-    elif borough == 'Bronx':
+    elif city == 'Bronx':
         return random.choice(bronx_locations)
     else:
         return random.choice(staten_island_locations)
 
-def get_dropoff_location(pickup_borough):
-    # 70% chance dropoff in same borough, 30% chance in different borough
+def get_dropoff_location(pickup_city):
+    # 70% chance dropoff in same city, 30% chance in different city
     if random.random() < 0.7:
-        return get_pickup_location(pickup_borough)
+        return get_pickup_location(pickup_city)
     else:
-        return get_pickup_location(random.choice([b for b in boroughs if b != pickup_borough]))
+        return get_pickup_location(random.choice([c for c in cities if c != pickup_city]))
 
 def generate_green_taxi_data(trip_id):
     # Base timestamp - random date in the last 30 days
     base_time = datetime.now() - timedelta(days=random.randint(1, 30))
     
     # Pickup details
-    pickup_borough = random.choice(boroughs)
-    pickup_location = get_pickup_location(pickup_borough)
+    pickup_city = random.choice(cities)
+    pickup_location = get_pickup_location(pickup_city)
     
     # Dropoff details
-    dropoff_borough = pickup_borough if random.random() < 0.7 else random.choice([b for b in boroughs if b != pickup_borough])
-    dropoff_location = get_dropoff_location(dropoff_borough)
+    dropoff_city = pickup_city if random.random() < 0.7 else random.choice([c for c in cities if c != pickup_city])
+    dropoff_location = get_dropoff_location(dropoff_city)
     
     # Trip metrics
     trip_distance = round(random.uniform(0.5, 25.0), 2)
@@ -97,21 +99,21 @@ def generate_green_taxi_data(trip_id):
     taxi_data = {
         "trip_id": f"trip_{trip_id:04d}",
         "vendor_id": random.randint(1, 2),
-        "pickup_dt": pickup_time.strftime("%Y-%m-%d %H:%M:%S"),
-        "dropoff_dt": dropoff_time.strftime("%Y-%m-%d %H:%M:%S"),
-        "passenger_cnt": random.randint(1, 6),
-        "trip_dst": trip_distance,
-        "pickup_city": pickup_borough,
-        "pickup_lct": pickup_location,
-        "dropoff_city": dropoff_borough,
-        "dropoff_lct": dropoff_location,
-        "fare_amt": fare_amount,
-        "tip_amt": tip_amount,
-        "tolls_amt": tolls_amount,
-        "total_amt": total_amount,
-        "payment_typ": random.choice(payment_types),
-        "rate_cd": random.choice(rate_codes),
-        "trip_typ": random.choice(trip_types),
+        "pickup_datetime": pickup_time.strftime("%Y-%m-%d %H:%M:%S"),
+        "dropoff_datetime": dropoff_time.strftime("%Y-%m-%d %H:%M:%S"),
+        "passenger_count": random.randint(1, 6),
+        "trip_distance": trip_distance,
+        "pickup_city": pickup_city,
+        "pickup_location": pickup_location,
+        "dropoff_city": dropoff_city,
+        "dropoff_location": dropoff_location,
+        "fare_amount": fare_amount,
+        "tip_amount": tip_amount,
+        "tolls_amount": tolls_amount,
+        "total_amount": total_amount,
+        "payment_type": random.choice(payment_types),
+        "rate_code": random.choice(rate_codes),
+        "trip_type": random.choice(trip_types),
         "congestion_surcharge": round(random.uniform(0.0, 2.5), 2) if random.random() < 0.4 else 0.0,
         "airport_fee": round(random.uniform(0.0, 1.25), 2) if random.random() < 0.2 else 0.0,
         "event_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -134,7 +136,7 @@ for i in range(total_records):
         record_metadata = future.get(timeout=10)
         
         sent_count += 1
-        print(f"✅ Sent record {sent_count}/{total_records}: Trip ID {data['trip_id']} - ${data['total_amount']} - {data['pickup_borough']} to {data['dropoff_borough']}")
+        print(f"✅ Sent record {sent_count}/{total_records}: Trip ID {data['trip_id']} - ${data['total_amount']} - {data['pickup_city']} to {data['dropoff_city']}")
         
     except Exception as e:
         print(f"❌ Error sending message: {e}")

@@ -1,0 +1,20 @@
+#revenue.yml
+
+#Generic Test running this test to check the data is unqiue and not null based.
+
+models:
+  - name: revenue
+    columns:
+      - name: vendor_id
+        tests:
+          - unique
+          - not_null
+
+command : dbt test
+
+#Specific Test check_revenue
+
+select *
+from {{ source('taxi_source', 'facts') }} f
+where total_revenue<0
+                     

@@ -22,7 +22,7 @@ wget https://github.com/aws/aws-msk-iam-auth/releases/download/v2.3.0/aws-msk-ia
 
 security.protocol=SASL_SSL
 sasl.mechanism=AWS_MSK_IAM
-sasl.jaas.config=software.amazon.msk.auth.iam.IAMLoginModule required
+sasl.jaas.config=software.amazon.msk.auth.iam.IAMLoginModule required;
 sasl.client.callback.handler.class=software.amazon.msk.auth.iam.IAMClientCallbackHandler
 
 #Export CLASSPATH
@@ -33,3 +33,4 @@ export CLASSPATH=/home/ec2-user/kafka_2.12-2.8.1/libs/aws-msk-iam-auth-2.3.0-all
 pip install kafka-python
 pip install aws-msk-iam-sasl-signer-python
 
+#Attach IAM Policy to Ec2 Instance for MSK Access.

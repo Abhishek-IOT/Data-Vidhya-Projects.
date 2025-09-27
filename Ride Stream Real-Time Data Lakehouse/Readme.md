@@ -5,15 +5,25 @@
 # AWS Services used :
 
 •	AWS Managed Service for Kafka
+
 •	Data Firehose
+
 •	S3
+
 •	Glue
+
 •	EMR
+
 •	Step Functions
+
 •	Glue Catalog
+
 •	Athena
+
 •	CloudFormation
+
 •	AWS CodePipeline
+
 •	AWS CodeBuild
 
 

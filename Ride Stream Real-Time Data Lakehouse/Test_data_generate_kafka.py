@@ -54,7 +54,7 @@ trip_types = ['Street-hail', 'Dispatch']
 
 def get_pickup_loc(city):
     if city == 'Manhattan':
-        return random.choice(manhattan_locations)
+        return random.choice(manhattan_locations);
     elif city == 'Brooklyn':
         return random.choice(brooklyn_locations)
     elif city == 'Queens':

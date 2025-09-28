@@ -1,4 +1,4 @@
-from kafka import KafkaProducer
+from kafka import KafkaProducer 
 from kafka.sasl.oauth import AbstractTokenProvider
 from aws_msk_iam_sasl_signer import MSKAuthTokenProvider
 import json

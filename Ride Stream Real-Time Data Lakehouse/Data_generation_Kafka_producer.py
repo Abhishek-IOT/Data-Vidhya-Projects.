@@ -5,7 +5,7 @@ import json
 import random
 from datetime import datetime, timedelta
 
-topicname = 'greentaxi'
+topicname = 'realtimeridedata'
 BROKERS = 'boot-azgxfx6o.c1.kafka-serverless.us-east-1.amazonaws.com:9098'
 region = 'us-east-1'
 

@@ -13,7 +13,7 @@ df = spark.read.option("header", "true") \
                .option("inferSchema", "true") \
                .option("quote", "\"") \
                .option("escape", "\"") \
-               .csv(input_path)
+               .csv(input_path)=
 
 # Debug: Check the schema and data
 print("=== Schema ===")

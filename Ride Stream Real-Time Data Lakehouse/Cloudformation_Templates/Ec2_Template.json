@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Create an EC2 t2.micro instance with setup commands",
+  "Description": "Create an EC2 instance from pre-configured AMI",
   "Parameters": {
     "EC2KeyPair": {
       "Type": "AWS::EC2::KeyPair::KeyName",
@@ -13,6 +13,11 @@
     "PublicSubnet": {
       "Type": "AWS::EC2::Subnet::Id",
       "Description": "Select a Public Subnet"
+    },
+    "CustomAMI": {
+      "Type": "String",
+      "Description": "AMI ID of your pre-configured machine",
+      "Default": "ami-08982f1c5bf93d976"
     }
   },
   "Resources": {
@@ -23,7 +28,9 @@
         "KeyName": {
           "Ref": "EC2KeyPair"
         },
-        "ImageId": "ami-08982f1c5bf93d976",
+        "ImageId": {
+          "Ref": "CustomAMI"
+        },
         "SecurityGroupIds": [
           {
             "Ref": "InstanceSecurityGroup"
@@ -35,20 +42,16 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "My Kafka_Instanse"
+            "Value": "My Kafka Client Instance"
           }
-        ],
-        "UserData": {
-          "Fn::Base64": {
-            "Fn::Sub":  "#!/bin/bash\n cd /home/ec2-user/\n yum -y install java-11\n sudo yum -y install python-pip\n wget https://archive.apache.org/dist/kafka/2.8.1/kafka_2.12-2.8.1.tgz\n tar -xzf kafka_2.12-2.8.1.tgz\n chmod +x kafka_2.12-2.8.1/bin/*.sh\n cd /home/ec2-user/kafka_2.12-2.8.1/libs/\n wget https://github.com/aws/aws-msk-iam-auth/releases/download/v2.3.0/aws-msk-iam-auth-2.3.0-all.jar\n cd /home/ec2-user/kafka_2.12-2.8.1/bin/\n echo 'security.protocol=SASL_SSL\n'>>client.properties\n echo 'sasl.mechanism=AWS_MSK_IAM\n' >>client.properties\n echo 'sasl.jaas.config=software.amazon.msk.auth.iam.IAMLoginModule required\n' >>client.properties\n echo 'sasl.client.callback.handler.class=software.amazon.msk.auth.iam.IAMClientCallbackHandler'>> client.properties"   
-          }
-        }
+        ]
+     
       }
     },
     "InstanceSecurityGroup": {
       "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
-        "GroupDescription": "Enable SSH and HTTP access",
+        "GroupDescription": "Enable SSH access",
         "VpcId": {
           "Ref": "VPC"
         },
@@ -57,12 +60,6 @@
             "IpProtocol": "tcp",
             "FromPort": 22,
             "ToPort": 22,
-            "CidrIp": "0.0.0.0/0"
-          },
-          {
-            "IpProtocol": "tcp",
-            "FromPort": 80,
-            "ToPort": 80,
             "CidrIp": "0.0.0.0/0"
           }
         ]

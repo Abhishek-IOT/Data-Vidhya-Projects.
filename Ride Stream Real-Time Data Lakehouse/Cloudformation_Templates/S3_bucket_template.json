@@ -1,60 +1,19 @@
 {
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "This is the production bucket for Project.",
   "Resources": {
-    "Bucket": {
+    "MySimpleBucket": {
       "Type": "AWS::S3::Bucket",
       "Properties": {
-        "BucketName": {
-          "Fn::Sub": "raw-bucket-${AWS::AccountId}"
-        },
-        "BucketEncryption": {
-          "ServerSideEncryptionConfiguration": [
-            {
-              "ServerSideEncryptionByDefault": {
-                "SSEAlgorithm": "aws:kms",
-                "KMSMasterKeyID": "alias/aws/s3"
-              }
-            }
-          ]
-        },
-        "PublicAccessBlockConfiguration": {
-          "IgnorePublicAcls": true,
-          "RestrictPublicBuckets": true
-        }
+        "BucketName": "ridestream-production"
       }
-    },
-    "BucketBucketPolicy": {
-      "Type": "AWS::S3::BucketPolicy",
-      "Properties": {
-        "Bucket": {
-          "Ref": "Bucket"
-        },
-        "PolicyDocument": {
-          "Id": "RequireEncryptionInTransit",
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Principal": "*",
-              "Action": "*",
-              "Effect": "Deny",
-              "Resource": [
-                {
-                  "Fn::GetAtt": [
-                    "Bucket",
-                    "Arn"
-                  ]
-                },
-                {
-                  "Fn::Sub": "${Bucket.Arn}/*"
-                }
-              ],
-              "Condition": {
-                "Bool": {
-                  "aws:SecureTransport": "false"
-                }
-              }
-            }
-          ]
-        }
+    }
+  },
+  "Outputs": {
+    "BucketName": {
+      "Description": "Name of the created S3 bucket",
+      "Value": {
+        "Ref": "MySimpleBucket"
       }
     }
   }

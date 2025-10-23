@@ -8,15 +8,16 @@
         "DeliveryStreamName": "MSK_Batch",
         "DeliveryStreamType": "MSKAsSource",
         "MSKSourceConfiguration": {
-          "MSKClusterARN": "arn:aws:kafka:us-east-1:12345567823:cluster/MSK/ba7eb6b6-307e-432d-af38-d0bb09003f2e-s1",
+          "MSKClusterARN": "arn:aws:kafka:us-east-1:12345678910:cluster/MSK/ba7eb6b6-307e-432d-af38-d0bb09003f2e-s1",
           "TopicName": "Ride_Stream",
           "AuthenticationConfiguration": {
-            "RoleARN": "arn:aws:iam::12345567823:role/service-role/KinesisFirehoseServiceRole-MSK_Batch-us-east-1-1757831436533"
+            "Connectivity": "PRIVATE",
+            "RoleARN": "arn:aws:iam::12345678910:role/service-role/KinesisFirehoseServiceRole-MSK_Batch-us-east-1-1757831436533"
           }
         },
-        "S3DestinationConfiguration": {
-          "RoleARN": "arn:aws:iam::12345567823:role/service-role/KinesisFirehoseServiceRole-MSK_Batch-us-east-1-1757831436533",
-          "BucketARN": "arn:aws:s3:::aws-glue-assets-640958509818-us-east-1",
+        "ExtendedS3DestinationConfiguration": {
+          "RoleARN": "arn:aws:iam::12345678910:role/service-role/KinesisFirehoseServiceRole-MSK_Batch-us-east-1-1757831436533",
+          "BucketARN": "arn:aws:s3:::aws-glue-assets-12345678910-us-east-1",
           "Prefix": "RAW/",
           "BufferingHints": {
             "IntervalInSeconds": 300,

@@ -12,10 +12,10 @@
         "Name": {
           "Ref": "JobName"
         },
-        "Role": "arn:aws:iam::123456789091:role/service-role/AWSGlueServiceRole-AQI_DATA",
+        "Role": "arn:aws:iam::12345678910:role/Glue_S3_msk_Access",
         "Command": {
           "Name": "glueetl",
-          "ScriptLocation": "s3://aws-glue-assets-123456789091-us-east-1/glue/glue_etl.py"
+          "ScriptLocation": "s3://aws-glue-assets-12345678910-us-east-1/scripts/RAW_TO_REFINED.py"
         },
         "DefaultArguments": {
           "--job-bookmark-option": "job-bookmark-enable"
@@ -26,4 +26,5 @@
       }
     }
   }
+
 }

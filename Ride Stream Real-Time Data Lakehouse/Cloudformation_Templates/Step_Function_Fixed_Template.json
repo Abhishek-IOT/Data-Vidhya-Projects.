@@ -69,7 +69,7 @@
           "Fn::GetAtt": "StepFunctionsExecutionRole.Arn"
         },
         "DefinitionString": {
-          "Fn::Sub": "{\n  \"Comment\": \"Run EMR Serverless Spark job\",\n  \"StartAt\": \"RunSparkJob\",\n  \"States\": {\n    \"RunSparkJob\": {\n      \"Type\": \"Task\",\n      \"Resource\": \"arn:aws:states:::emr-serverless:startJobRun.sync\",\n      \"Parameters\": {\n        \"ApplicationId\": \"00g0krba35bqe209\",\n        \"ExecutionRoleArn\": \"arn:aws:iam::12345678910:role/service-role/AmazonEMR-ExecutionRole-1757850783950\",\n        \"JobDriver\": {\n          \"SparkSubmit\": {\n            \"EntryPoint\": \"s3://aws-glue-assets/glue/spark_job.py\",\n            \"SparkSubmitParameters\": \"--conf spark.executor.memory=2g --conf spark.executor.cores=2\"\n          }\n        }\n      },\n      \"End\": true\n    }\n  }\n}"
+          "Fn::Sub": "{\n  \"Comment\": \"Run EMR Serverless Spark job\",\n  \"StartAt\": \"RunSparkJob\",\n  \"States\": {\n    \"RunSparkJob\": {\n      \"Type\": \"Task\",\n      \"Resource\": \"arn:aws:states:::emr-serverless:startJobRun.sync\",\n      \"Parameters\": {\n        \"ApplicationId\": \"00g0krba35bqe209\",\n        \"ExecutionRoleArn\": \"arn:aws:iam::12345678910:role/service-role/AmazonEMR-ExecutionRole-1757850783950\",\n        \"JobDriver\": {\n          \"SparkSubmit\": {\n            \"EntryPoint\": \"s3://ridestreamlakehouse/scripts/Spark_job.py\",\n            \"SparkSubmitParameters\": \"--conf spark.executor.memory=2g --conf spark.executor.cores=2\"\n          }\n        }\n      },\n      \"End\": true\n    }\n  }\n}"
         }
       }
     }

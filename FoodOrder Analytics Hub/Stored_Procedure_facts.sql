@@ -1,3 +1,4 @@
+
 drop procedure facts_load;
 call facts_load();
 
@@ -6,6 +7,11 @@ DELIMITER $$
 CREATE PROCEDURE facts_load()
 BEGIN
 
+	DECLARE v_load_start_time DATETIME;
+    DECLARE v_count_inserted INT DEFAULT 0;
+
+    -- Capture load start time
+    SET v_load_start_time = NOW();
     INSERT INTO BUSINESS.fact_order_patterns (
         customer_key,
         restaurant_key,
@@ -52,13 +58,17 @@ BEGIN
         preferred_cuisine,
         meal_period;
 
-    INSERT INTO Stage.etl_load_audit (
+  SET v_count_inserted = ROW_COUNT();
+  
+   INSERT INTO Stage.etl_load_audit (
         job_name,
         source_schema,
         source_table,
         target_schema,
         target_table,
         load_start_time,
+        load_end_time,
+        records_inserted,
         load_status,
         executed_by,
         execution_date
@@ -69,16 +79,16 @@ BEGIN
         'stg_orders',
         'BUSINESS',
         'fact_order_patterns',
+        v_load_start_time,
         NOW(),
+        v_count_inserted,
         'SUCCESS',
         'ETL_LOAD',
         CURDATE()
     );
-    
-    
+   
 
 END$$
 
 DELIMITER ;
-
 

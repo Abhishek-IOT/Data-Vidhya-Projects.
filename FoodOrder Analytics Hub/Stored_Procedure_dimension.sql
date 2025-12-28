@@ -1,6 +1,6 @@
 use business;
 
-rop procedure dimensions_load;
+drop procedure dimensions_load;
 call dimensions_load();
  
  DELIMITER $$
@@ -158,5 +158,6 @@ BEGIN
 END$$
 
 DELIMITER ;
+
 
 

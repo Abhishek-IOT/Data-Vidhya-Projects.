@@ -1,8 +1,6 @@
-CREATE SCHEMA BUSINESS;
-GO
-
-CREATE TABLE BUSINESS.dim_customers (
-    customer_key INT IDENTITY(1,1) PRIMARY KEY,
+create schema business;
+CREATE TABLE business.dim_customers (
+    customer_key BIGINT,
     customer_id INT,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
@@ -30,14 +28,12 @@ CREATE TABLE BUSINESS.dim_customers (
     -- SCD Type 2 Management
     start_date DATE,
     end_date DATE,
-    current_flag BIT DEFAULT 1,
-    version_number INT DEFAULT 1
+    current_flag INT,
+    version_number INT
 );
-GO
 
-
-CREATE TABLE BUSINESS.dim_restaurants (
-    restaurant_key INT IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE business.dim_restaurants (
+    restaurant_key BIGINT,
     restaurant_id INT,
     restaurant_name VARCHAR(100),
     cuisine_type VARCHAR(50),
@@ -46,13 +42,13 @@ CREATE TABLE BUSINESS.dim_restaurants (
     zip_code VARCHAR(20),
     phone VARCHAR(20),
     email VARCHAR(100),
-    is_active BIT
+    is_active INT
 );
 GO
 
 
-CREATE TABLE BUSINESS.dim_date (
-    date_key INT PRIMARY KEY, -- YYYYMMDD
+CREATE TABLE business.dim_date (
+    date_key BIGINT, -- YYYYMMDD
     full_date DATE,
     day INT,
     month INT,
@@ -64,8 +60,8 @@ GO
 
 
 
-CREATE TABLE BUSINESS.fact_order_patterns (
-    pattern_key BIGINT IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE business.fact_order_patterns (
+    pattern_key BIGINT,
 
     -- Foreign Keys
     customer_key INT NOT NULL,
@@ -88,17 +84,8 @@ CREATE TABLE BUSINESS.fact_order_patterns (
     avg_delivery_distance DECIMAL(8,2),
 
     -- Audit
-    load_timestamp DATETIME2 DEFAULT SYSDATETIME(),
-
-    -- Foreign Key Constraints
-    CONSTRAINT fk_fact_customer
-        FOREIGN KEY (customer_key) REFERENCES BUSINESS.dim_customers(customer_key),
-
-    CONSTRAINT fk_fact_restaurant
-        FOREIGN KEY (restaurant_key) REFERENCES BUSINESS.dim_restaurants(restaurant_key),
-
-    CONSTRAINT fk_fact_date
-        FOREIGN KEY (date_key) REFERENCES BUSINESS.dim_date(date_key)
+    load_timestamp DATETIME2(6)
 );
 GO
+
 

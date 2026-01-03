@@ -12,5 +12,6 @@ On Premise Architecture :
 
 Migration and Cloud Architecture :
 
-![alt text](Migration_to_Cloud_Architecture.PNG)
+<img width="484" height="529" alt="image" src="https://github.com/user-attachments/assets/51304e5b-b805-4186-a7e5-c00c41e81602" />
+
 

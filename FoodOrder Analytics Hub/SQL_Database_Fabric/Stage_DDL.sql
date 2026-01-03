@@ -1,5 +1,6 @@
 CREATE SCHEMA Stage;
 
+
 CREATE TABLE Stage.stg_customers (
     customer_id INT,
     first_name VARCHAR(50),
@@ -11,9 +12,8 @@ CREATE TABLE Stage.stg_customers (
     state VARCHAR(50),
     zip_code VARCHAR(20),
     registration_date DATE,
-    load_timestamp DATETIME2 DEFAULT SYSDATETIME()
+    load_timestamp DATETIME2(6)
 );
-GO
 
 
 CREATE TABLE Stage.stg_restaurants (
@@ -27,9 +27,10 @@ CREATE TABLE Stage.stg_restaurants (
     phone VARCHAR(20),
     email VARCHAR(100),
     is_active BIT,
-    load_timestamp DATETIME2 DEFAULT SYSDATETIME()
+    load_timestamp DATETIME2(6)
 );
 GO
+
 
 
 CREATE TABLE Stage.stg_orders (
@@ -43,7 +44,7 @@ CREATE TABLE Stage.stg_orders (
     payment_method VARCHAR(50),
     payment_status VARCHAR(20),
     delivery_instructions VARCHAR(MAX),
-    load_timestamp DATETIME2 DEFAULT SYSDATETIME()
+    load_timestamp DATETIME2(6)
 );
 GO
 

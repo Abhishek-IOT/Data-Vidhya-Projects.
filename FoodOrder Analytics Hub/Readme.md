@@ -28,4 +28,11 @@ This Migration will include :
 # Migration Strategy
 - Lift and Shift
 
+# What we are going to Learn :
+
+- Migration of On Premise Tables to Cloud Warehouse.
+- Migration of Historical Data from On Premise to Cloud Warehouse via Data Gateways.
+- Migration of Logics with which data will be loaded in Cloud.(In Sync with On Premise).
+- Redirection of Sources and Targets to Cloud instead of On Premise.
+
 

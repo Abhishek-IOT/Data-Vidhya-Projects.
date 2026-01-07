@@ -4,6 +4,13 @@
 
 ![alt text](image.png)
 
+This Migration will include :
+
+* Migration of Tables.
+* Migration of Logics of Loading the Tables.
+* Redirection of Sources(Upstream) and Targets(Downstream).
+
+
 # Migration to Cloud
 
 # On Premise Architecture :
@@ -18,5 +25,7 @@
 
 <img width="763" height="427" alt="image" src="https://github.com/user-attachments/assets/f909c917-fd91-45a6-a1f6-25d8a472933b" />
 
+# Migration Strategy
+- Lift and Shift
 
 

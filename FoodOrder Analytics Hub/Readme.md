@@ -33,6 +33,7 @@ This Migration will include :
 - Migration of On Premise Tables to Cloud Warehouse.
 - Migration of Historical Data from On Premise to Cloud Warehouse via Data Gateways.
 - Migration of Logics with which data will be loaded in Cloud.(In Sync with On Premise).
+- Conversion of Stored Procedure into Data Pipeline in Fabric.
 - Redirection of Sources and Targets to Cloud instead of On Premise.
 
 

@@ -1,4 +1,4 @@
-# Types of Stored Procedure used :
+Types of Stored Procedure used :
 
 - Insertion
 - Updation

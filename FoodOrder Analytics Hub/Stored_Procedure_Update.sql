@@ -1,6 +1,10 @@
 CALL execute_update_statement(
-    'UPDATE BUSINESS.fact_order_patterns SET TOTAL_SPENT=30 WHERE DATE_KEY=20240115','fact_order_patterns'
+  'BUSINESS',
+  'fact_order_patterns',
+  'TOTAL_SPENT = 300',
+  'DATE_KEY = 20240115'
 );
+
 
 DROP PROCEDURE execute_update_statement;
 

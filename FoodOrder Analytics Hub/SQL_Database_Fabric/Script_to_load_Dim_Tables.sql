@@ -3,7 +3,7 @@ DECLARE @row_count_before BIGINT;
 DECLARE @row_count_after  BIGINT;
 DECLARE @load_start_ts    DATETIME2(6);
 DECLARE @load_end_ts      DATETIME2(6);
-DECLARE @audit_id         BIGINT;
+DECLARE @audit_id         VARCHAR;
 
 
 -- Capture load start time
@@ -104,6 +104,10 @@ FROM business.dim_customers;
 -- Capture load end time
 SELECT @load_end_ts = CURRENT_TIMESTAMP;
 
+-- Select @audit_id = CONCAT(
+    'job_load_',
+    FORMAT(CURRENT_TIMESTAMP, 'yyyyMMdd_HHmmss'));
+
 -- Insert audit record
 INSERT INTO Stage.etl_load_audit (
     audit_id,
@@ -120,7 +124,7 @@ INSERT INTO Stage.etl_load_audit (
     execution_date
 )
 VALUES (
-    1,
+    @audit_id,
     'JOB_stg_customers_to_dim_customers_LOAD',
     'Stage',
     'stg_customers',
@@ -166,6 +170,9 @@ FROM business.dim_restaurants;
 -- Capture load end time
 SELECT @load_end_ts = CURRENT_TIMESTAMP;	
 
+-- Select @audit_id = CONCAT(
+    'job_load_',
+    FORMAT(CURRENT_TIMESTAMP, 'yyyyMMdd_HHmmss'));
 
 -- Insert audit record
 INSERT INTO Stage.etl_load_audit (
@@ -183,7 +190,7 @@ INSERT INTO Stage.etl_load_audit (
     execution_date
 )
 VALUES (
-    1,
+    @audit_id,
     'JOB_stg_restaurants_to_dim_restaurants_LOAD',
     'Stage',
     'stg_restaurants',

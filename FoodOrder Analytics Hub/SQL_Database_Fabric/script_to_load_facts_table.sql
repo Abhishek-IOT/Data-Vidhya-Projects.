@@ -3,7 +3,7 @@ DECLARE @row_count_before BIGINT;
 DECLARE @row_count_after  BIGINT;
 DECLARE @load_start_ts    DATETIME2(6);
 DECLARE @load_end_ts      DATETIME2(6);
-DECLARE @audit_id         BIGINT;
+DECLARE @audit_id         VARCHAR;
 
 
 -- Capture load start time
@@ -73,3 +73,38 @@ FROM business.fact_order_patterns;
 
 -- Capture load end time
 SELECT @load_end_ts = CURRENT_TIMESTAMP;		
+
+-- Select @audit_id = CONCAT(
+    'job_load_',
+    FORMAT(CURRENT_TIMESTAMP, 'yyyyMMdd_HHmmss'));
+
+-- Insert audit record
+INSERT INTO Stage.etl_load_audit (
+    audit_id,
+    job_name,
+    source_schema,
+    source_table,
+    target_schema,
+    target_table,
+    load_start_time,
+    load_end_time,
+    records_inserted,
+    load_status,
+    executed_by,
+    execution_date
+)
+VALUES (
+    @audit_id,
+    'JOB_stg_orders_to_fact_order_patterns_LOAD',
+    'Stage',
+    'stg_orders',
+    'Stage',
+    'fact_order_patterns',
+    @load_start_ts,
+    @load_end_ts,
+    @row_count_after - @row_count_before,
+    'SUCCESS',
+    'ETL_LOAD',
+    CAST(@load_end_ts AS DATE)
+);
+

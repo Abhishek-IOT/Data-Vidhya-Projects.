@@ -1,5 +1,5 @@
-CREATE TABLE Stage.etl_load_audit (
-    audit_id BIGINT varchar(MAX),
+CREATE  TABLE Stage.etl_load_audit (
+    audit_id VARCHAR(MAX),
     job_name VARCHAR(100),
     source_schema VARCHAR(50),
     source_table VARCHAR(100),

@@ -74,7 +74,8 @@ FROM business.fact_order_patterns;
 -- Capture load end time
 SELECT @load_end_ts = CURRENT_TIMESTAMP;		
 
--- Select @audit_id = CONCAT(
+-- Capture Audit_id
+Select @audit_id = CONCAT(
     'job_load_',
     FORMAT(CURRENT_TIMESTAMP, 'yyyyMMdd_HHmmss'));
 

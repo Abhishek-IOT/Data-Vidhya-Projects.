@@ -1,67 +1,67 @@
-create schema Stage;
+CREATE SCHEMA STAGE;
 
-SELECT * from Stage.stg_customer;
+SELECT * FROM STAGE.STG_CUSTOMER;
 
-CREATE TABLE Stage.stg_customer
+CREATE TABLE STAGE.STG_CUSTOMER
 (
-    customer_id         VARCHAR(50),
-    full_name           VARCHAR(200),
-    date_of_birth       DATE,
-    gender              VARCHAR(20),
-    city                VARCHAR(100),
-    state               VARCHAR(100),
-    pincode             VARCHAR(20),
-    employment_type     VARCHAR(50),
-    annual_income       DECIMAL(18,2),
-    account_open_date   DATE,
-    kyc_status          VARCHAR(20),      -- VERIFIED / PENDING
-    customer_status     VARCHAR(20),      -- ACTIVE / CLOSED
-    ingestion_ts        DATETIME2
+    CUSTOMER_ID         VARCHAR(50),
+    FULL_NAME           VARCHAR(200),
+    DATE_OF_BIRTH       DATE,
+    GENDER              VARCHAR(20),
+    CITY                VARCHAR(100),
+    STATE               VARCHAR(100),
+    PINCODE             VARCHAR(20),
+    EMPLOYMENT_TYPE     VARCHAR(50),
+    ANNUAL_INCOME       DECIMAL(18,2),
+    ACCOUNT_OPEN_DATE   DATE,
+    KYC_STATUS          VARCHAR(20),      -- VERIFIED / PENDING
+    CUSTOMER_STATUS     VARCHAR(20),      -- ACTIVE / CLOSED
+    INGESTION_TS        DATETIME2
 );
 
 
-CREATE TABLE Stage.stg_loan_application
+CREATE TABLE STAGE.STG_LOAN_APPLICATION
 (
-    application_id      VARCHAR(100),
-    customer_id         VARCHAR(100),
-    application_ts      DATETIME2(6),
-    channel             VARCHAR(50),      -- MOBILE / WEB / BRANCH
-    loan_product        VARCHAR(50),      -- PERSONAL / HOME / AUTO
-    requested_amount    DECIMAL(18,2),
-    tenure_months       INT,
-    interest_rate       DECIMAL(5,2),
-    purpose             VARCHAR(200),
-    branch_id           VARCHAR(50),
-    application_status  VARCHAR(50),      -- SUBMITTED
-    ingestion_ts        DATETIME2(6)
-);
-
-
-
-CREATE TABLE Stage.stg_application_device
-(
-    application_id      VARCHAR(100),
-    device_id           VARCHAR(100),
-    device_type         VARCHAR(100),      -- Android / iPhone / Laptop
-    os_version          VARCHAR(100),
-    browser             VARCHAR(100),
-    ip_address          VARCHAR(100),
-    latitude            DECIMAL(5,2),
-    longitude           DECIMAL(5,2),
-    event_ts            DATETIME2(6),
-    ingestion_ts        DATETIME2(6)
+    APPLICATION_ID      VARCHAR(100),
+    CUSTOMER_ID         VARCHAR(100),
+    APPLICATION_TS      DATETIME2(6),
+    CHANNEL             VARCHAR(50),      -- MOBILE / WEB / BRANCH
+    LOAN_PRODUCT        VARCHAR(50),      -- PERSONAL / HOME / AUTO
+    REQUESTED_AMOUNT    DECIMAL(18,2),
+    TENURE_MONTHS       INT,
+    INTEREST_RATE       DECIMAL(5,2),
+    PURPOSE             VARCHAR(200),
+    BRANCH_ID           VARCHAR(50),
+    APPLICATION_STATUS  VARCHAR(50),      -- SUBMITTED
+    INGESTION_TS        DATETIME2(6)
 );
 
 
 
-CREATE TABLE Stage.stg_credit_bureau
+CREATE TABLE STAGE.STG_APPLICATION_DEVICE
 (
-    customer_id         varchar(100),
-    credit_score        INT,
-    total_accounts      INT,
-    active_loans        INT,
-    past_defaults       INT,
-    enquiries_last_6m   INT,
-    bureau_source       varchar(100),
-    report_date         DATE
+    APPLICATION_ID      VARCHAR(100),
+    DEVICE_ID           VARCHAR(100),
+    DEVICE_TYPE         VARCHAR(100),      -- ANDROID / IPHONE / LAPTOP
+    OS_VERSION          VARCHAR(100),
+    BROWSER             VARCHAR(100),
+    IP_ADDRESS          VARCHAR(100),
+    LATITUDE            DECIMAL(5,2),
+    LONGITUDE           DECIMAL(5,2),
+    EVENT_TS            DATETIME2(6),
+    INGESTION_TS        DATETIME2(6)
+);
+
+
+
+CREATE TABLE STAGE.STG_CREDIT_BUREAU
+(
+    CUSTOMER_ID         VARCHAR(100),
+    CREDIT_SCORE        INT,
+    TOTAL_ACCOUNTS      INT,
+    ACTIVE_LOANS        INT,
+    PAST_DEFAULTS       INT,
+    ENQUIRIES_LAST_6M   INT,
+    BUREAU_SOURCE       VARCHAR(100),
+    REPORT_DATE         DATE
 );

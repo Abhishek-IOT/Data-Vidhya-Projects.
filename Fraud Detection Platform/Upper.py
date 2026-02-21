@@ -1,6 +1,5 @@
 file_path = "Stage_Tables_DDLs.sql"
 
-
 # Step 1: Read file content
 with open(file_path, "r") as file:
     content = file.read()

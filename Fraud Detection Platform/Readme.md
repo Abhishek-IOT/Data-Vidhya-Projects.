@@ -10,4 +10,4 @@
 
 # Data Model :
 
-Data Model Loan Fraud.png
+![Data Model Loan Fraud.png](<Data Model Loan Fraud.png>)

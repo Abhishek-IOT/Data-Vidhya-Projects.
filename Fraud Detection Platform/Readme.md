@@ -10,4 +10,4 @@
 
 # Data Model :
 
-![alt text](<Data_Model Loan Fraud.png>)
+Data Model Loan Fraud.png

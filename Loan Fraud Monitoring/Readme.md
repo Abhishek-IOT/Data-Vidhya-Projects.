@@ -1,4 +1,4 @@
-# Fraud Detection Platform.
+# Loan Fraud Monitoring 
 
 # Scenario :
 - Nowerdays banks gets the Applications for various types of loans(home,vehicle,personal,etc).

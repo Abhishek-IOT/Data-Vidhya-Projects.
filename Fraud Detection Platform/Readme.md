@@ -6,7 +6,8 @@
 - Then create a report and present it to higher management for business actions.
 
 # Architecture :
-<img width="807" height="380" alt="image" src="https://github.com/user-attachments/assets/13041359-293a-4c39-af38-773b45a5435b" />
+
+![alt text](Architecture_Loan_Fraud_Monitoring.PNG)
 
 # Data Model :
 

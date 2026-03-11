@@ -1,3 +1,7 @@
+Firstly we will load the Ingestion Table in KQL database and this table will be having all the Realtime JSON Data.
+
+
+
 CREATE SCHEMA STAGE;
 
 SELECT * FROM STAGE.STG_CUSTOMER;

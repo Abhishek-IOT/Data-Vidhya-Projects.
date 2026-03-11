@@ -5,9 +5,9 @@ from datetime import datetime
 from azure.eventhub import EventHubProducerClient, EventData
 from faker import Faker
 
-fake = Faker("en_IN")   # Indian realistic names
+fake = Faker("en_IN")   
 
-CONNECTION_STR = "NEED to provide PRIMARY String"
+CONNECTION_STR = "Primary Key Connection"
 EVENT_HUB_NAME = "loan_events"
 
 producer = EventHubProducerClient.from_connection_string(

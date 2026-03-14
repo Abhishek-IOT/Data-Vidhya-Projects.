@@ -12,3 +12,10 @@
 # Data Model :
 
 ![Data Model Loan Fraud.png](<Data Model Loan Fraud.png>)
+
+
+# Data Flow :
+
+- KQL Database -> Fabric Warehouse(RAW) : Dataflow automated by Data Pipeline.
+- Fabric Warehouse(RAW) -> Fabric Warehouse(SILVER) : Data Pipeline.
+- Fabric Warehouse(SILVER) -> Fabric Warehouse(GOLD) : Notebooks automated by Data Pipeline.

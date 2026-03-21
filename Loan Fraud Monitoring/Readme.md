@@ -17,5 +17,7 @@
 # Data Flow :
 
 - KQL Database -> Fabric Warehouse(RAW) : Dataflow automated by Data Pipeline.
+![alt text](image.png)
 - Fabric Warehouse(RAW) -> Fabric Warehouse(SILVER) : Data Pipeline.
 - Fabric Warehouse(SILVER) -> Fabric Warehouse(GOLD) : Notebooks automated by Data Pipeline.
+

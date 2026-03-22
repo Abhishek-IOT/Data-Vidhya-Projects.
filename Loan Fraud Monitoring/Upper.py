@@ -1,4 +1,4 @@
-file_path = "Stage_Tables_DDLs.sql"
+file_path = "script_to_load_EventStream.py"
 
 # Step 1: Read file content
 with open(file_path, "r") as file:
@@ -12,3 +12,4 @@ with open(file_path, "w") as file:
     file.write(upper_content)
 
 print("File updated successfully!")
+

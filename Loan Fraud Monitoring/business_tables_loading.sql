@@ -71,6 +71,42 @@ WHEN NOT MATCHED THEN
     );
 
 
+MERGE into Business.dim_device as tgt
+USING
+(
+Select 
+device_id,
+device_type,
+os_version,
+browser,
+ip_address,
+latitude,
+longitude
+from 
+STAGE.STG_APPLICATION_DEVICE
+) as SRC
+on tgt.device_id=src.device_id 
+when not matched then insert 
+(
+device_id,
+device_type,
+os_version,
+browser,
+ip_address,
+latitude,
+longitude
+)
+values
+(
+src.device_id,
+src.device_type,
+src.os_version,
+src.browser,
+src.ip_address,
+src.latitude,
+src.longitude
+);
+
 
 
 INSERT INTO Gold.fact_loan_application

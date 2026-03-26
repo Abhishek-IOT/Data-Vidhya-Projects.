@@ -24,7 +24,8 @@ WHEN MATCHED THEN
         tgt.city = src.city,
         tgt.state = src.state,
         tgt.annual_income = src.annual_income,
-        tgt.kyc_status = src.kyc_status
+        tgt.kyc_status = src.kyc_status,
+        tgt.is_current=0
 
 WHEN NOT MATCHED THEN
     INSERT (
@@ -76,6 +77,7 @@ USING
 (
 Select 
 device_id,
+application_id,
 device_type,
 os_version,
 browser,
@@ -89,6 +91,7 @@ on tgt.device_id=src.device_id
 when not matched then insert 
 (
 device_id,
+application_id,
 device_type,
 os_version,
 browser,
@@ -99,6 +102,7 @@ longitude
 values
 (
 src.device_id,
+application_id,
 src.device_type,
 src.os_version,
 src.browser,
@@ -109,7 +113,7 @@ src.longitude
 
 
 
-INSERT INTO Gold.fact_loan_application
+INSERT INTO Business.fact_loan_application
 (
     application_id,
     customer_key,
@@ -135,7 +139,6 @@ SELECT
     a.tenure_months,
     a.interest_rate,
 
-    -- 🔥 Simple Fraud Logic
     CASE 
         WHEN cr.credit_score < 600 THEN 1
         WHEN a.requested_amount > 1000000 THEN 1
@@ -151,12 +154,12 @@ SELECT
 
 FROM Stage.stg_loan_application a
 
-LEFT JOIN Gold.dim_customer c
-    ON a.customer_id = c.customer_id
+LEFT JOIN Business.dim_customer c
+    ON a.CUSTOMER_ID = c.CUSTOMER_ID
     AND c.is_current = 1
 
-LEFT JOIN Gold.dim_device d
-    ON a.device_id = d.device_id
+LEFT JOIN Business.DIM_DEVICE d
+    ON a.APPLICATION_ID  = d.APPLICATION_ID 
 
-LEFT JOIN Gold.dim_credit_profile cr
-    ON a.customer_id = cr.customer_id;
+LEFT JOIN Business.dim_credit_profile cr
+    ON a.CUSTOMER_ID  = cr.CUSTOMER_ID ;

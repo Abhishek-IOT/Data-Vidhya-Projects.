@@ -26,3 +26,6 @@
 ![alt text](image-3.png)
 # - Fabric Warehouse(SILVER) -> Fabric Warehouse(GOLD) : View Layer .
 ![alt text](image-2.png)
+
+# POWER BI REPORT
+![alt text](image-4.png)

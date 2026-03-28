@@ -18,8 +18,11 @@
 
 - KQL Database -> Fabric Warehouse(RAW) : Dataflow automated by Data Pipeline.
 ![alt text](image.png)
-Credit Info : Daily Load from External getting csv file stored in Lakehouse : use of copy data to load CIBIL Data.
-![alt text](image-1.png)
-- Fabric Warehouse(RAW) -> Fabric Warehouse(SILVER) : Data Pipeline.
-- Fabric Warehouse(SILVER) -> Fabric Warehouse(GOLD) : Notebooks automated by Data Pipeline.
 
+
+Credit Info : Daily Load from External csv file stored in Lakehouse : use of copy data to load CIBIL Data.
+![alt text](image-1.png)
+- Fabric Warehouse(RAW) -> Fabric Warehouse(SILVER) : Scripts using Data Pipeline.
+![alt text](image-3.png)
+- Fabric Warehouse(SILVER) -> Fabric Warehouse(GOLD) : View Layer .
+![alt text](image-2.png)

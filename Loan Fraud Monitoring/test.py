@@ -8,14 +8,14 @@ from faker import Faker
 
 fake = Faker("en_IN")   
 
-CONNECTION_STR = "Primary Key Connection"
+# CONNECTION_STR = "Primary Key Connection"
+#
+# EVENT_HUB_NAME = "loan_events"
 
-EVENT_HUB_NAME = "loan_events"
-
-producer = EventHubProducerClient.from_connection_string(
-    conn_str=CONNECTION_STR,
-    eventhub_name=EVENT_HUB_NAME
-)
+# producer = EventHubProducerClient.from_connection_string(
+#     conn_str=CONNECTION_STR,
+#     eventhub_name=EVENT_HUB_NAME
+# )
 
 def random_date(start_year=2000, end_year=2015):
     start_date = datetime(start_year, 1, 1)
@@ -23,18 +23,22 @@ def random_date(start_year=2000, end_year=2015):
 
     delta = end_date - start_date
     random_days = random.randint(0, delta.days)
-    input_ts=(start_date + timedelta(days=random_days)).isoformat()  
-    dt = datetime.strptime(input_ts, "%Y-%m-%dT%H:%M:%S")
+    input_ts=(start_date + timedelta(days=random_days)).utcnow().isoformat()  
+    dt = datetime.strptime(input_ts, "%Y-%m-%dT%H:%M:%S.%f")
     output = dt.strftime("%d/%m/%Y, %H:%M:%S.%f")[:-3] + " +00:00"
     return output
 
 def random_date_birth(start_year=1950, end_year=1980):
     start_date = datetime(start_year, 1, 1)
     end_date = datetime(end_year, 12, 31)
-
+    print(start_date)
+    print(end_date)
     delta = end_date - start_date
-    random_days = random.randint(0, delta.days)
-    input_ts=(start_date + timedelta(days=random_days)).isoformat()  
+    print(delta)
+    random_days = random.randint(0, 2000)
+    print(random_days)
+    input_ts=(start_date + timedelta(days=random_days)).isoformat()
+    print(input_ts,"=====")  
     dt = datetime.strptime(input_ts, "%Y-%m-%dT%H:%M:%S")
     output = dt.strftime("%d/%m/%Y, %H:%M:%S.%f")[:-3] + " +00:00"
     return output
@@ -125,7 +129,7 @@ def generate_sample_event(i):
     }
 
 try:
-    for i in range(1, 100):
+    for i in range(1, 10):
         state = random.choice(list(STATE_CITY_MAP.keys()))
         city = random.choice(STATE_CITY_MAP[state])
         pincode=random.choice(CITY_PINCODE_MAP[city])
@@ -141,14 +145,15 @@ try:
             }
 
         purpose=random.choice(PRICES_MAP[loan_product])
-        batch = producer.create_batch()
+        # batch = producer.create_batch()
         event = generate_sample_event(i)
-        batch.add(EventData(json.dumps(event)))
-        producer.send_batch(batch)
+        # batch.add(EventData(json.dumps(event)))
+        # producer.send_batch(batch)
         print(event)
         print(f"Sent event {i}")
         time.sleep(1)
 
 finally:
-    producer.close()
+    # producer.close()
     print("Completed")
+   

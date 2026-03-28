@@ -16,13 +16,13 @@
 
 # Data Flow :
 
-- KQL Database -> Fabric Warehouse(RAW) : Dataflow automated by Data Pipeline.
+# - KQL Database -> Fabric Warehouse(RAW) : Dataflow automated by Data Pipeline.
 ![alt text](image.png)
 
 
-Credit Info : Daily Load from External csv file stored in Lakehouse : use of copy data to load CIBIL Data.
+# Credit Info : Daily Load from External csv file stored in Lakehouse : use of copy data to load CIBIL Data.
 ![alt text](image-1.png)
-- Fabric Warehouse(RAW) -> Fabric Warehouse(SILVER) : Scripts using Data Pipeline.
+# - Fabric Warehouse(RAW) -> Fabric Warehouse(SILVER) : Scripts using Data Pipeline.
 ![alt text](image-3.png)
-- Fabric Warehouse(SILVER) -> Fabric Warehouse(GOLD) : View Layer .
+# - Fabric Warehouse(SILVER) -> Fabric Warehouse(GOLD) : View Layer .
 ![alt text](image-2.png)

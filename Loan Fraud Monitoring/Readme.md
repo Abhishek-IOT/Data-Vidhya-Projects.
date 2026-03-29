@@ -7,7 +7,7 @@
 
 # Architecture :
 
-![alt text](Architecture_Loan_Fraud_Monitoring.PNG)
+![alt text](Architecture_Loan_Fraud_Monitoring.png)
 
 # Data Model :
 

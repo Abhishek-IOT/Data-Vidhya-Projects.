@@ -125,7 +125,7 @@ def generate_sample_event(i):
     }
 
 try:
-    for i in range(1, 100):
+    for i in range(1, 150000):
         state = random.choice(list(STATE_CITY_MAP.keys()))
         city = random.choice(STATE_CITY_MAP[state])
         pincode=random.choice(CITY_PINCODE_MAP[city])

@@ -2,5 +2,5 @@
 
 # Architecture :
 
-E-Commerce Architecture.png
+![alt text](image.png)
 

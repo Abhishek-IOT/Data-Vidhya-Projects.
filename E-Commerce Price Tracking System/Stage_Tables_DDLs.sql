@@ -1,5 +1,5 @@
-create database DEVELOPM_DEVENT;
-create schema STAGE;
+create database DEVELOPMENT;
+create schema STAGE_DEV;
 
 
 CREATE OR REPLACE TABLE STG_CUSTOMERS (

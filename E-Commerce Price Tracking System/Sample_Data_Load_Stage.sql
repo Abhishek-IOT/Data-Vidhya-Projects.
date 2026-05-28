@@ -237,7 +237,7 @@ FROM TABLE(GENERATOR(ROWCOUNT => 100));
 INSERT INTO STG_PROMOTIONS
 SELECT
     'PROMO_' || LPAD(SEQ4()+1,4,'0') AS PROMOTION_ID,
-
+    'PROD_' || LPAD(UNIFORM(1,100,RANDOM()),4,'0') as PRODUCT_ID,
     CASE MOD(SEQ4(),20)
         WHEN 0 THEN 'Back to School Mega Deals'
         WHEN 1 THEN 'Black Friday Early Access'

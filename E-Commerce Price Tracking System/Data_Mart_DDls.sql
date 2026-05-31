@@ -1,17 +1,19 @@
-use database development;
-create schema mart;
-use schema mart;
-
+use database STAGE_DEV;
+create schema data_mart;
+use schema data_mart;
 
 CREATE OR REPLACE TABLE DIM_CUSTOMER (
     CUSTOMER_KEY           NUMBER AUTOINCREMENT,
     CUSTOMER_ID            STRING,
     CUSTOMER_NAME          STRING,
+    EMAIL                  STRING,
     CITY                   STRING,
     STATE                  STRING,
     COUNTRY                STRING,
     CUSTOMER_STATUS        STRING,
-    LOAD_DATE              TIMESTAMP
+    LOAD_DATE              TIMESTAMP,
+    CREATED_TS            TIMESTAMP,
+    UPDATED_TS            TIMESTAMP
 );
 
 
@@ -21,7 +23,9 @@ CREATE OR REPLACE TABLE DIM_PRODUCT (
     PRODUCT_NAME           STRING,
     CATEGORY               STRING,
     BRAND                  STRING,
-    LOAD_DATE              TIMESTAMP
+    LOAD_DATE              TIMESTAMP,
+    CREATED_TS            TIMESTAMP,
+    UPDATED_TS            TIMESTAMP
 );
 
 
@@ -32,8 +36,9 @@ CREATE OR REPLACE TABLE DIM_SELLER (
     SELLER_RATING          NUMBER(3,2),
     CITY                   STRING,
     COUNTRY                STRING,
-    LOAD_DATE              TIMESTAMP
-
+    LOAD_DATE              TIMESTAMP,
+    CREATED_TS            TIMESTAMP,
+    UPDATED_TS            TIMESTAMP
 );
 
 

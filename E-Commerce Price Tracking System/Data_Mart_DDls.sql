@@ -45,9 +45,11 @@ CREATE OR REPLACE TABLE DIM_SELLER (
 CREATE OR REPLACE TABLE DIM_DATE (
     DATE_KEY               NUMBER,
     FULL_DATE              DATE,
-    DAY_NAME               STRING,
+    DAY_Number               STRING,
+    MONTH_NUMBER           NUMBER,
     MONTH_NAME             STRING,
-    YEAR                   NUMBER,
+    QUARTER_NUMBER         String,
+    YEAR_NUMBER                   NUMBER,
     LOAD_DATE              TIMESTAMP
 
 );

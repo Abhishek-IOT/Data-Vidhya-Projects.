@@ -1,6 +1,6 @@
 import os
 import random
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta,timezone
 
 import pandas as pd
 from faker import Faker
@@ -175,7 +175,8 @@ def generate_price_updates(products):
             "PRICE_UPDATE_TIME":
                 fake.date_time_between(
                     start_date="-1y",
-                    end_date="now"
+                    end_date="now",
+                    tzinfo=timezone.utc
                 ),
             "RECORD_SOURCE":"ERP"
         })
@@ -316,6 +317,10 @@ sellers = generate_sellers()
 products = generate_products()
 
 price_updates = generate_price_updates(products)
+# price_updates["PRICE_UPDATE_TIME"] = pd.to_datetime(
+#     price_updates["PRICE_UPDATE_TIME"]
+# ).dt.tz_localize(None)
+
 promotions = generate_promotions(products)
 
 orders, order_items = generate_orders(
@@ -351,8 +356,8 @@ sellers.to_json(
     indent=4
 )
 
-price_updates.to_parquet(
-    "price_updates.parquet",
+price_updates.to_csv(
+    "price_updates.csv",
     index=False
 )
 
@@ -362,3 +367,7 @@ order_items.to_parquet(
 )
 
 print("Files generated successfully.")
+
+# import pyarrow.parquet as pq
+# table = pq.read_table("price_updates.parquet")
+# print(table.schema)

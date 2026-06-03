@@ -1,51 +1,15 @@
 [
     {
         "PRODUCT_ID":"PROD0001",
-        "PRODUCT_NAME":"Running Shoes",
+        "PRODUCT_NAME":"Gym Bag",
         "CATEGORY":"Sports",
         "BRAND":"Adidas",
-        "BASE_PRICE":120,
+        "BASE_PRICE":60,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0002",
-        "PRODUCT_NAME":"iPhone 15",
-        "CATEGORY":"Electronics",
-        "BRAND":"Sony",
-        "BASE_PRICE":999,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0003",
-        "PRODUCT_NAME":"Football",
-        "CATEGORY":"Sports",
-        "BRAND":"Nike",
-        "BASE_PRICE":30,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0004",
-        "PRODUCT_NAME":"Dishwasher",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"LG",
-        "BASE_PRICE":700,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0005",
-        "PRODUCT_NAME":"Microwave Oven",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"LG",
-        "BASE_PRICE":180,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0006",
         "PRODUCT_NAME":"Air Purifier",
         "CATEGORY":"Home Appliances",
         "BRAND":"Whirlpool",
@@ -54,34 +18,16 @@
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0007",
-        "PRODUCT_NAME":"Smart TV",
+        "PRODUCT_ID":"PROD0003",
+        "PRODUCT_NAME":"Galaxy S24",
         "CATEGORY":"Electronics",
-        "BRAND":"Sony",
-        "BASE_PRICE":799,
+        "BRAND":"Apple",
+        "BASE_PRICE":899,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0008",
-        "PRODUCT_NAME":"Smart TV",
-        "CATEGORY":"Electronics",
-        "BRAND":"Sony",
-        "BASE_PRICE":799,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0009",
-        "PRODUCT_NAME":"Dishwasher",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"LG",
-        "BASE_PRICE":700,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0010",
+        "PRODUCT_ID":"PROD0004",
         "PRODUCT_NAME":"Running Shoes",
         "CATEGORY":"Sports",
         "BRAND":"Nike",
@@ -90,29 +36,83 @@
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0011",
-        "PRODUCT_NAME":"Air Purifier",
+        "PRODUCT_ID":"PROD0005",
+        "PRODUCT_NAME":"Football",
+        "CATEGORY":"Sports",
+        "BRAND":"Adidas",
+        "BASE_PRICE":30,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0006",
+        "PRODUCT_NAME":"Smart TV",
+        "CATEGORY":"Electronics",
+        "BRAND":"Sony",
+        "BASE_PRICE":799,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0007",
+        "PRODUCT_NAME":"Running Shoes",
+        "CATEGORY":"Sports",
+        "BRAND":"Adidas",
+        "BASE_PRICE":120,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0008",
+        "PRODUCT_NAME":"iPhone 15",
+        "CATEGORY":"Electronics",
+        "BRAND":"Sony",
+        "BASE_PRICE":999,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0009",
+        "PRODUCT_NAME":"Microwave Oven",
         "CATEGORY":"Home Appliances",
-        "BRAND":"LG",
-        "BASE_PRICE":250,
+        "BRAND":"Whirlpool",
+        "BASE_PRICE":180,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0010",
+        "PRODUCT_NAME":"Gym Bag",
+        "CATEGORY":"Sports",
+        "BRAND":"Adidas",
+        "BASE_PRICE":60,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0011",
+        "PRODUCT_NAME":"Sony Headphones",
+        "CATEGORY":"Electronics",
+        "BRAND":"Sony",
+        "BASE_PRICE":199,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0012",
-        "PRODUCT_NAME":"Dishwasher",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"LG",
-        "BASE_PRICE":700,
+        "PRODUCT_NAME":"iPhone 15",
+        "CATEGORY":"Electronics",
+        "BRAND":"Samsung",
+        "BASE_PRICE":999,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0013",
-        "PRODUCT_NAME":"Gym Bag",
-        "CATEGORY":"Sports",
-        "BRAND":"Nike",
-        "BASE_PRICE":60,
+        "PRODUCT_NAME":"Smart TV",
+        "CATEGORY":"Electronics",
+        "BRAND":"Apple",
+        "BASE_PRICE":799,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
@@ -127,24 +127,6 @@
     },
     {
         "PRODUCT_ID":"PROD0015",
-        "PRODUCT_NAME":"Gym Bag",
-        "CATEGORY":"Sports",
-        "BRAND":"Nike",
-        "BASE_PRICE":60,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0016",
-        "PRODUCT_NAME":"iPhone 15",
-        "CATEGORY":"Electronics",
-        "BRAND":"Apple",
-        "BASE_PRICE":999,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0017",
         "PRODUCT_NAME":"Football",
         "CATEGORY":"Sports",
         "BRAND":"Adidas",
@@ -153,7 +135,7 @@
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0018",
+        "PRODUCT_ID":"PROD0016",
         "PRODUCT_NAME":"Sony Headphones",
         "CATEGORY":"Electronics",
         "BRAND":"Apple",
@@ -162,47 +144,65 @@
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0019",
-        "PRODUCT_NAME":"Dishwasher",
+        "PRODUCT_ID":"PROD0017",
+        "PRODUCT_NAME":"Microwave Oven",
         "CATEGORY":"Home Appliances",
-        "BRAND":"Whirlpool",
-        "BASE_PRICE":700,
+        "BRAND":"LG",
+        "BASE_PRICE":180,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0018",
+        "PRODUCT_NAME":"Smart TV",
+        "CATEGORY":"Electronics",
+        "BRAND":"Sony",
+        "BASE_PRICE":799,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0019",
+        "PRODUCT_NAME":"Smart TV",
+        "CATEGORY":"Electronics",
+        "BRAND":"Apple",
+        "BASE_PRICE":799,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0020",
-        "PRODUCT_NAME":"iPhone 15",
-        "CATEGORY":"Electronics",
-        "BRAND":"Samsung",
-        "BASE_PRICE":999,
+        "PRODUCT_NAME":"Running Shoes",
+        "CATEGORY":"Sports",
+        "BRAND":"Nike",
+        "BASE_PRICE":120,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0021",
-        "PRODUCT_NAME":"Gym Bag",
-        "CATEGORY":"Sports",
-        "BRAND":"Nike",
-        "BASE_PRICE":60,
+        "PRODUCT_NAME":"Galaxy S24",
+        "CATEGORY":"Electronics",
+        "BRAND":"Samsung",
+        "BASE_PRICE":899,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0022",
-        "PRODUCT_NAME":"Air Purifier",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"LG",
-        "BASE_PRICE":250,
+        "PRODUCT_NAME":"Football",
+        "CATEGORY":"Sports",
+        "BRAND":"Adidas",
+        "BASE_PRICE":30,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0023",
-        "PRODUCT_NAME":"Microwave Oven",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"LG",
-        "BASE_PRICE":180,
+        "PRODUCT_NAME":"Football",
+        "CATEGORY":"Sports",
+        "BRAND":"Adidas",
+        "BASE_PRICE":30,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
@@ -217,42 +217,24 @@
     },
     {
         "PRODUCT_ID":"PROD0025",
-        "PRODUCT_NAME":"Smart TV",
-        "CATEGORY":"Electronics",
-        "BRAND":"Apple",
-        "BASE_PRICE":799,
+        "PRODUCT_NAME":"Running Shoes",
+        "CATEGORY":"Sports",
+        "BRAND":"Adidas",
+        "BASE_PRICE":120,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0026",
-        "PRODUCT_NAME":"Microwave Oven",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"LG",
-        "BASE_PRICE":180,
+        "PRODUCT_NAME":"Gym Bag",
+        "CATEGORY":"Sports",
+        "BRAND":"Nike",
+        "BASE_PRICE":60,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0027",
-        "PRODUCT_NAME":"Galaxy S24",
-        "CATEGORY":"Electronics",
-        "BRAND":"Apple",
-        "BASE_PRICE":899,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0028",
-        "PRODUCT_NAME":"Sony Headphones",
-        "CATEGORY":"Electronics",
-        "BRAND":"Apple",
-        "BASE_PRICE":199,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0029",
         "PRODUCT_NAME":"Dishwasher",
         "CATEGORY":"Home Appliances",
         "BRAND":"LG",
@@ -261,25 +243,52 @@
         "RECORD_SOURCE":"ERP"
     },
     {
+        "PRODUCT_ID":"PROD0028",
+        "PRODUCT_NAME":"iPhone 15",
+        "CATEGORY":"Electronics",
+        "BRAND":"Samsung",
+        "BASE_PRICE":999,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0029",
+        "PRODUCT_NAME":"iPhone 15",
+        "CATEGORY":"Electronics",
+        "BRAND":"Sony",
+        "BASE_PRICE":999,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
         "PRODUCT_ID":"PROD0030",
-        "PRODUCT_NAME":"Microwave Oven",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"Whirlpool",
-        "BASE_PRICE":180,
+        "PRODUCT_NAME":"iPhone 15",
+        "CATEGORY":"Electronics",
+        "BRAND":"Apple",
+        "BASE_PRICE":999,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0031",
-        "PRODUCT_NAME":"Air Purifier",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"LG",
-        "BASE_PRICE":250,
+        "PRODUCT_NAME":"iPhone 15",
+        "CATEGORY":"Electronics",
+        "BRAND":"Apple",
+        "BASE_PRICE":999,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0032",
+        "PRODUCT_NAME":"Dishwasher",
+        "CATEGORY":"Home Appliances",
+        "BRAND":"LG",
+        "BASE_PRICE":700,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0033",
         "PRODUCT_NAME":"Gym Bag",
         "CATEGORY":"Sports",
         "BRAND":"Adidas",
@@ -288,61 +297,16 @@
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0033",
-        "PRODUCT_NAME":"Running Shoes",
-        "CATEGORY":"Sports",
-        "BRAND":"Adidas",
-        "BASE_PRICE":120,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
         "PRODUCT_ID":"PROD0034",
-        "PRODUCT_NAME":"iPhone 15",
-        "CATEGORY":"Electronics",
-        "BRAND":"Samsung",
-        "BASE_PRICE":999,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0035",
-        "PRODUCT_NAME":"Sony Headphones",
-        "CATEGORY":"Electronics",
-        "BRAND":"Samsung",
-        "BASE_PRICE":199,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0036",
         "PRODUCT_NAME":"Smart TV",
         "CATEGORY":"Electronics",
-        "BRAND":"Apple",
+        "BRAND":"Sony",
         "BASE_PRICE":799,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0037",
-        "PRODUCT_NAME":"Running Shoes",
-        "CATEGORY":"Sports",
-        "BRAND":"Adidas",
-        "BASE_PRICE":120,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0038",
-        "PRODUCT_NAME":"Galaxy S24",
-        "CATEGORY":"Electronics",
-        "BRAND":"Samsung",
-        "BASE_PRICE":899,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0039",
+        "PRODUCT_ID":"PROD0035",
         "PRODUCT_NAME":"Microwave Oven",
         "CATEGORY":"Home Appliances",
         "BRAND":"LG",
@@ -351,61 +315,43 @@
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0040",
-        "PRODUCT_NAME":"Sony Headphones",
-        "CATEGORY":"Electronics",
-        "BRAND":"Apple",
-        "BASE_PRICE":199,
+        "PRODUCT_ID":"PROD0036",
+        "PRODUCT_NAME":"Air Purifier",
+        "CATEGORY":"Home Appliances",
+        "BRAND":"Whirlpool",
+        "BASE_PRICE":250,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0041",
-        "PRODUCT_NAME":"Galaxy S24",
-        "CATEGORY":"Electronics",
-        "BRAND":"Apple",
-        "BASE_PRICE":899,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0042",
-        "PRODUCT_NAME":"Sony Headphones",
-        "CATEGORY":"Electronics",
-        "BRAND":"Samsung",
-        "BASE_PRICE":199,
-        "PRODUCT_STATUS":"ACTIVE",
-        "RECORD_SOURCE":"ERP"
-    },
-    {
-        "PRODUCT_ID":"PROD0043",
-        "PRODUCT_NAME":"Football",
+        "PRODUCT_ID":"PROD0037",
+        "PRODUCT_NAME":"Gym Bag",
         "CATEGORY":"Sports",
         "BRAND":"Adidas",
-        "BASE_PRICE":30,
+        "BASE_PRICE":60,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0044",
-        "PRODUCT_NAME":"Galaxy S24",
+        "PRODUCT_ID":"PROD0038",
+        "PRODUCT_NAME":"Sony Headphones",
         "CATEGORY":"Electronics",
         "BRAND":"Samsung",
-        "BASE_PRICE":899,
+        "BASE_PRICE":199,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0045",
-        "PRODUCT_NAME":"iPhone 15",
-        "CATEGORY":"Electronics",
-        "BRAND":"Samsung",
-        "BASE_PRICE":999,
+        "PRODUCT_ID":"PROD0039",
+        "PRODUCT_NAME":"Gym Bag",
+        "CATEGORY":"Sports",
+        "BRAND":"Adidas",
+        "BASE_PRICE":60,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0046",
+        "PRODUCT_ID":"PROD0040",
         "PRODUCT_NAME":"Air Purifier",
         "CATEGORY":"Home Appliances",
         "BRAND":"LG",
@@ -414,7 +360,43 @@
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0047",
+        "PRODUCT_ID":"PROD0041",
+        "PRODUCT_NAME":"Running Shoes",
+        "CATEGORY":"Sports",
+        "BRAND":"Adidas",
+        "BASE_PRICE":120,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0042",
+        "PRODUCT_NAME":"Air Purifier",
+        "CATEGORY":"Home Appliances",
+        "BRAND":"LG",
+        "BASE_PRICE":250,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0043",
+        "PRODUCT_NAME":"Air Purifier",
+        "CATEGORY":"Home Appliances",
+        "BRAND":"LG",
+        "BASE_PRICE":250,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0044",
+        "PRODUCT_NAME":"Air Purifier",
+        "CATEGORY":"Home Appliances",
+        "BRAND":"LG",
+        "BASE_PRICE":250,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0045",
         "PRODUCT_NAME":"Football",
         "CATEGORY":"Sports",
         "BRAND":"Adidas",
@@ -423,29 +405,47 @@
         "RECORD_SOURCE":"ERP"
     },
     {
-        "PRODUCT_ID":"PROD0048",
-        "PRODUCT_NAME":"Sony Headphones",
+        "PRODUCT_ID":"PROD0046",
+        "PRODUCT_NAME":"Microwave Oven",
+        "CATEGORY":"Home Appliances",
+        "BRAND":"Whirlpool",
+        "BASE_PRICE":180,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0047",
+        "PRODUCT_NAME":"iPhone 15",
         "CATEGORY":"Electronics",
-        "BRAND":"Samsung",
-        "BASE_PRICE":199,
+        "BRAND":"Sony",
+        "BASE_PRICE":999,
+        "PRODUCT_STATUS":"ACTIVE",
+        "RECORD_SOURCE":"ERP"
+    },
+    {
+        "PRODUCT_ID":"PROD0048",
+        "PRODUCT_NAME":"Smart TV",
+        "CATEGORY":"Electronics",
+        "BRAND":"Apple",
+        "BASE_PRICE":799,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0049",
-        "PRODUCT_NAME":"Air Purifier",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"Whirlpool",
-        "BASE_PRICE":250,
+        "PRODUCT_NAME":"iPhone 15",
+        "CATEGORY":"Electronics",
+        "BRAND":"Samsung",
+        "BASE_PRICE":999,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     },
     {
         "PRODUCT_ID":"PROD0050",
-        "PRODUCT_NAME":"Dishwasher",
-        "CATEGORY":"Home Appliances",
-        "BRAND":"Whirlpool",
-        "BASE_PRICE":700,
+        "PRODUCT_NAME":"Running Shoes",
+        "CATEGORY":"Sports",
+        "BRAND":"Nike",
+        "BASE_PRICE":120,
         "PRODUCT_STATUS":"ACTIVE",
         "RECORD_SOURCE":"ERP"
     }

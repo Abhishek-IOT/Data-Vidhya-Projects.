@@ -204,4 +204,36 @@ FROM
 
 
 
+INSERT INTO data_mart.FACT_SALES (
+    CUSTOMER_KEY,PRODUCT_KEY,SELLER_KEY,date_key,order_id,quantity,unit_price,total_price,load_date
+)
+select CUSTOMER_KEY,PRODUCT_KEY,SELLER_KEY,null as date_key,order_id,quantity,unit_price,total_price,current_timestamp() as load_date from 
+(select distinct hc.customer_hk,hc.customer_id,lco.order_hk,customer_key,lop.product_hk,hp.product_id,dp.product_key,hs.seller_id,st.quantity,st.unit_price,st.total_price,ho.order_id 
+,ds.seller_key
+from hub_customer hc
+left join LINK_CUSTOMER_ORDER lco on
+hc.customer_hk=lco.customer_hk
+left join data_mart.dim_customer dc on 
+hc.customer_id=concat(split_part(dc.customer_id,'_',1),'0',split_part(dc.customer_id,'_',2))
+left join link_order_product lop on 
+lco.order_hk=lop.order_hk
+left join hub_product hp on 
+lop.product_hk=hp.product_hk
+left join data_mart.dim_product dp on 
+hp.product_id=dp.product_id
+left join link_product_seller lps on 
+lop.product_hk=lps.product_hk
+left join hub_seller hs on 
+lps.seller_hk=hs.seller_hk
+left join vault.SAT_ORDER_ITEM_HISTORY st on 
+lco.order_hk=st.order_hk and lop.product_hk=st.product_hk and lps.seller_hk=st.seller_hk
+left join hub_order ho on
+lco.order_hk=ho.order_hk
+left join data_mart.dim_seller ds on 
+hs.seller_id=ds.seller_id
+where st.active_ind='Y'
+);
+
+
+
 

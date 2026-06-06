@@ -236,7 +236,21 @@ where st.active_ind='Y'
 
 
 
-
+insert into data_mart.FACT_PRICE_HISTORY 
+(product_key,seller_key, date_key,price,discount_percent,final_price,load_date)
+select product_key,seller_key,to_char(current_date(),'YYYYMMDD') as date_key,price,discount_percent,final_price,current_timestamp() as load_date
+from vault.hub_product hp
+left join data_mart.dim_product dp on
+hp.product_id=dp.product_id 
+left join vault.LINK_PRODUCT_SELLER lps
+on hp.product_hk=lps.product_hk
+left join hub_seller hs on 
+lps.seller_hk=hs.seller_hk
+left join data_mart.dim_seller ds on 
+ds.seller_id=ds.seller_id
+left join vault.SAT_PRODUCT_PRICE_HISTORY sppt on
+hp.product_hk=sppt.product_hk and hs.seller_hk=sppt.seller_hk
+;
 
 
 

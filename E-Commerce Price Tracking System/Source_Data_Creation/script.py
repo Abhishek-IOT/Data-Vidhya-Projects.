@@ -54,6 +54,20 @@ PRODUCT_CATALOG = {
     }
 }
 
+def generate_id(prefix, number):
+    """
+    Generates consistent business keys.
+
+    Examples:
+        CUST00000001
+        SELL00000001
+        PROD00000001
+        ORD00000001
+        PROM00000001
+    """
+    return f"{prefix}{number:08d}"
+
+
 def generate_customers():
     rows = []
 
@@ -62,7 +76,7 @@ def generate_customers():
         city, state, country = random.choice(LOCATIONS)
 
         rows.append({
-            "CUSTOMER_ID": f"CUST{i:05}",
+            "CUSTOMER_ID": generate_id("CUST", i),
             "CUSTOMER_NAME": fake.name(),
             "EMAIL": fake.email(),
             "PHONE": fake.msisdn()[:10],
@@ -99,7 +113,7 @@ def generate_sellers():
         city, state, country = random.choice(LOCATIONS)
 
         rows.append({
-            "SELLER_ID": f"SELL{i:03}",
+            "SELLER_ID": generate_id("SELL", i),
             "SELLER_NAME":
                 random.choice(seller_names) +
                 f" {i}",
@@ -133,7 +147,7 @@ def generate_products():
         )
 
         rows.append({
-            "PRODUCT_ID": f"PROD{i:04}",
+            "PRODUCT_ID": generate_id("PROD", i),
             "PRODUCT_NAME": product_name,
             "CATEGORY": category,
             "BRAND": brand,
@@ -235,7 +249,7 @@ def generate_orders(customers, products, sellers):
 
     for i in range(1, NUM_ORDERS+1):
 
-        order_id = f"ORD{i:06}"
+        order_id = generate_id("ORD", i)
 
         customer = customers.sample(1).iloc[0]
 

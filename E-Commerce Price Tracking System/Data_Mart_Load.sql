@@ -1,4 +1,9 @@
-
+CREATE OR REPLACE PROCEDURE SP_LOAD_DATA_MART()
+RETURNS STRING
+LANGUAGE SQL
+AS
+$$
+BEGIN
 MERGE INTO DATA_MART.DIM_CUSTOMER T
 USING
 (
@@ -121,7 +126,7 @@ USING
     SELECT
         HC.SELLER_ID,
         SCD.SELLER_NAME,
-        SCD.SELLER_RATING,
+        coalesce(SCD.SELLER_RATING,0) as SELLER_RATING,
         SCD.CITY,
 		SCD.COUNTRY,
     FROM VAULT.HUB_SELLER HC
@@ -135,7 +140,7 @@ WHEN MATCHED
 AND
 (
        NVL(T.SELLER_NAME,'') <> NVL(S.SELLER_NAME,'')
-    OR NVL(T.SELLER_RATING,'')         <> NVL(S.SELLER_RATING,'')
+    OR NVL(T.SELLER_RATING,0)         <> NVL(S.SELLER_RATING,0)
     OR NVL(T.CITY,'')          <> NVL(S.CITY,'')
 	OR NVL(T.COUNTRY,'')          <> NVL(S.COUNTRY,'')
 )
@@ -173,7 +178,8 @@ VALUES
 
 
 
-INSERT INTO DIM_DATE
+
+INSERT INTO data_mart.DIM_DATE
 (
     DATE_KEY,
     FULL_DATE,
@@ -251,6 +257,11 @@ ds.seller_id=ds.seller_id
 left join vault.SAT_PRODUCT_PRICE_HISTORY sppt on
 hp.product_hk=sppt.product_hk and hs.seller_hk=sppt.seller_hk
 ;
+
+ RETURN 'SUCCESS';
+
+END;
+$$;
 
 
 

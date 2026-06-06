@@ -207,7 +207,7 @@ FROM
 INSERT INTO data_mart.FACT_SALES (
     CUSTOMER_KEY,PRODUCT_KEY,SELLER_KEY,date_key,order_id,quantity,unit_price,total_price,load_date
 )
-select CUSTOMER_KEY,PRODUCT_KEY,SELLER_KEY,null as date_key,order_id,quantity,unit_price,total_price,current_timestamp() as load_date from 
+select CUSTOMER_KEY,PRODUCT_KEY,SELLER_KEY,to_char(current_date(),'YYYYMMDD') as date_key,order_id,quantity,unit_price,total_price,current_timestamp() as load_date from 
 (select distinct hc.customer_hk,hc.customer_id,lco.order_hk,customer_key,lop.product_hk,hp.product_id,dp.product_key,hs.seller_id,st.quantity,st.unit_price,st.total_price,ho.order_id 
 ,ds.seller_key
 from hub_customer hc
@@ -233,6 +233,9 @@ left join data_mart.dim_seller ds on
 hs.seller_id=ds.seller_id
 where st.active_ind='Y'
 );
+
+
+
 
 
 

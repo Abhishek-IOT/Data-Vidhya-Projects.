@@ -898,11 +898,10 @@ AS HASHDIFF,
 WHERE T.HASHDIFF is null or
 S.HASHDIFF  <> T.HASHDIFF;
         
- 
 
-   END;
 
    RETURN 'SUCCESS';
+      END;
 $$;   
 
 

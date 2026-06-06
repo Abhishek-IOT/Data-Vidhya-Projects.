@@ -1,161 +1,161 @@
 [
     {
-        "SELLER_ID":"SELL001",
-        "SELLER_NAME":"Elite Sports 1",
-        "SELLER_RATING":4.16,
-        "CITY":"Houston",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL002",
-        "SELLER_NAME":"Home Essentials 2",
-        "SELLER_RATING":4.46,
-        "CITY":"Chicago",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL003",
-        "SELLER_NAME":"BestBuy Marketplace 3",
-        "SELLER_RATING":4.24,
-        "CITY":"Chicago",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL004",
-        "SELLER_NAME":"Tech World 4",
-        "SELLER_RATING":4.28,
-        "CITY":"Chicago",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL005",
-        "SELLER_NAME":"Elite Sports 5",
-        "SELLER_RATING":4.83,
+        "SELLER_ID":"SELL00000001",
+        "SELLER_NAME":"Tech World 1",
+        "SELLER_RATING":4.49,
         "CITY":"Los Angeles",
         "COUNTRY":"USA",
         "RECORD_SOURCE":"MARKETPLACE"
     },
     {
-        "SELLER_ID":"SELL006",
-        "SELLER_NAME":"BestBuy Marketplace 6",
-        "SELLER_RATING":4.34,
-        "CITY":"Seattle",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL007",
-        "SELLER_NAME":"Tech World 7",
-        "SELLER_RATING":4.41,
-        "CITY":"Chicago",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL008",
-        "SELLER_NAME":"Elite Sports 8",
-        "SELLER_RATING":4.4,
-        "CITY":"Houston",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL009",
-        "SELLER_NAME":"BestBuy Marketplace 9",
-        "SELLER_RATING":4.11,
-        "CITY":"Houston",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL010",
-        "SELLER_NAME":"Tech World 10",
-        "SELLER_RATING":4.53,
-        "CITY":"Houston",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL011",
-        "SELLER_NAME":"BestBuy Marketplace 11",
-        "SELLER_RATING":4.21,
-        "CITY":"Chicago",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL012",
-        "SELLER_NAME":"Home Essentials 12",
-        "SELLER_RATING":4.08,
-        "CITY":"Los Angeles",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL013",
-        "SELLER_NAME":"Home Essentials 13",
-        "SELLER_RATING":4.7,
-        "CITY":"Houston",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL014",
-        "SELLER_NAME":"Tech World 14",
-        "SELLER_RATING":4.22,
-        "CITY":"Austin",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL015",
-        "SELLER_NAME":"Tech World 15",
-        "SELLER_RATING":4.15,
-        "CITY":"Chicago",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL016",
-        "SELLER_NAME":"Digital Hub 16",
-        "SELLER_RATING":4.23,
-        "CITY":"Houston",
-        "COUNTRY":"USA",
-        "RECORD_SOURCE":"MARKETPLACE"
-    },
-    {
-        "SELLER_ID":"SELL017",
-        "SELLER_NAME":"Home Essentials 17",
-        "SELLER_RATING":4.11,
+        "SELLER_ID":"SELL00000002",
+        "SELLER_NAME":"Digital Hub 2",
+        "SELLER_RATING":4.48,
         "CITY":"New York",
         "COUNTRY":"USA",
         "RECORD_SOURCE":"MARKETPLACE"
     },
     {
-        "SELLER_ID":"SELL018",
-        "SELLER_NAME":"Tech World 18",
-        "SELLER_RATING":4.98,
+        "SELLER_ID":"SELL00000003",
+        "SELLER_NAME":"Home Essentials 3",
+        "SELLER_RATING":4.72,
         "CITY":"Seattle",
         "COUNTRY":"USA",
         "RECORD_SOURCE":"MARKETPLACE"
     },
     {
-        "SELLER_ID":"SELL019",
-        "SELLER_NAME":"Elite Sports 19",
-        "SELLER_RATING":4.2,
+        "SELLER_ID":"SELL00000004",
+        "SELLER_NAME":"Home Essentials 4",
+        "SELLER_RATING":4.56,
+        "CITY":"Boston",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000005",
+        "SELLER_NAME":"Digital Hub 5",
+        "SELLER_RATING":4.21,
+        "CITY":"Houston",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000006",
+        "SELLER_NAME":"Home Essentials 6",
+        "SELLER_RATING":5.0,
         "CITY":"Chicago",
         "COUNTRY":"USA",
         "RECORD_SOURCE":"MARKETPLACE"
     },
     {
-        "SELLER_ID":"SELL020",
-        "SELLER_NAME":"Elite Sports 20",
-        "SELLER_RATING":4.89,
+        "SELLER_ID":"SELL00000007",
+        "SELLER_NAME":"BestBuy Marketplace 7",
+        "SELLER_RATING":4.94,
+        "CITY":"New York",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000008",
+        "SELLER_NAME":"BestBuy Marketplace 8",
+        "SELLER_RATING":4.83,
+        "CITY":"Seattle",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000009",
+        "SELLER_NAME":"Elite Sports 9",
+        "SELLER_RATING":4.94,
+        "CITY":"Boston",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000010",
+        "SELLER_NAME":"Home Essentials 10",
+        "SELLER_RATING":4.33,
+        "CITY":"Los Angeles",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000011",
+        "SELLER_NAME":"Home Essentials 11",
+        "SELLER_RATING":4.54,
         "CITY":"Chicago",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000012",
+        "SELLER_NAME":"Digital Hub 12",
+        "SELLER_RATING":4.33,
+        "CITY":"Austin",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000013",
+        "SELLER_NAME":"Tech World 13",
+        "SELLER_RATING":4.11,
+        "CITY":"Austin",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000014",
+        "SELLER_NAME":"Home Essentials 14",
+        "SELLER_RATING":4.55,
+        "CITY":"Chicago",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000015",
+        "SELLER_NAME":"Digital Hub 15",
+        "SELLER_RATING":4.62,
+        "CITY":"Los Angeles",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000016",
+        "SELLER_NAME":"Digital Hub 16",
+        "SELLER_RATING":4.54,
+        "CITY":"Seattle",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000017",
+        "SELLER_NAME":"Elite Sports 17",
+        "SELLER_RATING":4.18,
+        "CITY":"Austin",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000018",
+        "SELLER_NAME":"BestBuy Marketplace 18",
+        "SELLER_RATING":4.55,
+        "CITY":"New York",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000019",
+        "SELLER_NAME":"Digital Hub 19",
+        "SELLER_RATING":4.12,
+        "CITY":"Boston",
+        "COUNTRY":"USA",
+        "RECORD_SOURCE":"MARKETPLACE"
+    },
+    {
+        "SELLER_ID":"SELL00000020",
+        "SELLER_NAME":"Elite Sports 20",
+        "SELLER_RATING":4.57,
+        "CITY":"New York",
         "COUNTRY":"USA",
         "RECORD_SOURCE":"MARKETPLACE"
     }

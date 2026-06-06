@@ -220,7 +220,7 @@ from hub_customer hc
 left join LINK_CUSTOMER_ORDER lco on
 hc.customer_hk=lco.customer_hk
 left join data_mart.dim_customer dc on 
-hc.customer_id=concat(split_part(dc.customer_id,'_',1),'0',split_part(dc.customer_id,'_',2))
+hc.customer_id=dc.customer_id
 left join link_order_product lop on 
 lco.order_hk=lop.order_hk
 left join hub_product hp on 

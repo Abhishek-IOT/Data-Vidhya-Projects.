@@ -763,8 +763,8 @@ PRODUCT_HK,
 )
 
 SELECT
+    S.PRODUCT_HK,
     S.SELLER_HK,
-	S.PRODUCT_HK,
      S.PRICE,
     S.DISCOUNT_PERCENT       ,
 	S.FINAL_PRICE            ,

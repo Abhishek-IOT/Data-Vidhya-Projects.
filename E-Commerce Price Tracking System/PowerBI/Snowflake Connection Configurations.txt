@@ -1,7 +1,8 @@
 
-Need to run this Statement in Snowflake :
+Need to run this Statement in Snowflake to the get Current_account:
 
-select  CURRENT_ACCOUNT_NAME();
+select  LOWER(CURRENT_ACCOUNT());
 
+Then you need to check the url of snowflake and see where the region is and you need to give it as it is.
 
-xxxxxxx.us-east-1.aws.snowflakecomputing.com
+xxxxxxx.us-east-1.snowflakecomputing.com

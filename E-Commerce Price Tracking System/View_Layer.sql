@@ -7,3 +7,15 @@ left join data_mart.dim_product dm on fc.product_key=dm.product_key
 where product_name in ('iPhone 15','Galaxy S24')
 group by date_key,product_name,final_price order by product_name desc,final_price desc
 ;
+
+
+create or replace view dm_view.seller_price_comparison as 
+SELECT
+    dm1.PRODUCT_NAME,
+    dm2.SELLER_NAME,
+    min(total_price) as  AVG_PRICE
+    -- sum(total_price)as avg_pr
+FROM data_mart.fact_sales fc
+left join data_mart.dim_product dm1 on fc.product_key=dm1.product_key
+left join data_mart.dim_seller dm2 on fc.seller_key=dm2.seller_key
+GROUP BY ALL;

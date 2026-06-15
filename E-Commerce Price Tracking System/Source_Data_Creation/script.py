@@ -272,6 +272,8 @@ def generate_orders(customers, products, sellers):
                 qty * unit_price,
                 2
             )
+            
+           
 
             order_total += total_price
 
@@ -282,6 +284,7 @@ def generate_orders(customers, products, sellers):
                 "SELLER_ID":
                     seller["SELLER_ID"],
                 "QUANTITY": qty,
+                
                 "UNIT_PRICE":
                     unit_price,
                 "TOTAL_PRICE":

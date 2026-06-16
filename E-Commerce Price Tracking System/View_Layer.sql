@@ -27,4 +27,5 @@ group by 1,2
 ;
 
 
-
+create or replace view dm_view.seller_rating as 
+select distinct seller_name,seller_rating from data_mart.dim_seller;

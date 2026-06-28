@@ -27,6 +27,6 @@ Data Vault 2.0 is a detail-oriented, history-tracking, and highly scalable data 
 
 4. **Loading Speed** : Data Vault supports high-speed parallel loading because tables are decoupled. Dimensional modeling requires sequential loading to maintain foreign key integrity.
 
-Dashboard :
+# Dashboard :
 
-![alt text](image-3.png)
+![alt text](Dashboard-1.png)

@@ -26,3 +26,7 @@ Data Vault 2.0 is a detail-oriented, history-tracking, and highly scalable data 
 3. **Data Vault** stores the history automatically **Dimensional modeling** uses complex Slowly Changing Dimensions **(SCD)** types.
 
 4. **Loading Speed** : Data Vault supports high-speed parallel loading because tables are decoupled. Dimensional modeling requires sequential loading to maintain foreign key integrity.
+
+Dashboard :
+
+![alt text](image-3.png)

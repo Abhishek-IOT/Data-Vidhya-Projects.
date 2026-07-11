@@ -1,7 +1,7 @@
 create Schema Transactional_Data;
 
 
-CREATE TABLE Transactional_Data.STG_RESTAURANT_ORDERS
+CREATE TABLE Transactional_Data.STG_RESTAURANT_ORDERS_ONLINE
 (
     RESTAURANT_ID                            INT                 NOT NULL,
     RESTAURANT_NAME                          NVARCHAR(255)       NOT NULL,
@@ -48,4 +48,45 @@ CREATE TABLE Transactional_Data.STG_RESTAURANT_ORDERS
     CUSTOMER_ID                             NVARCHAR(128)       NOT NULL,
      QUANTITY					 				DECIMAL(10,2)       NULL,
    
+);
+
+
+
+
+CREATE TABLE Transactional_Data.STG_RESTAURANT_ORDERS
+(
+    RESTAURANT_ID                            INT                 NOT NULL,
+RESTAURANT_NAME                          NVARCHAR(255)       NOT NULL,
+SUBZONE                                 NVARCHAR(255)       NULL,
+CITY                                    NVARCHAR(100)       NOT NULL,
+
+ORDER_ID                                BIGINT              NOT NULL,
+ORDER_PLACED_AT                         DATETIME2(0)        NOT NULL,
+ITEM_NAME                               NVARCHAR(500)       NOT NULL,
+DISCOUNT_CONSTRUCT                      NVARCHAR(500)       NULL,
+
+BILL_SUBTOTAL                           DECIMAL(10,2)       NULL,
+
+
+RESTAURANT_DISCOUNT_PROMO               DECIMAL(10,2)       NULL,
+RESTAURANT_DISCOUNT_FLAT_OFF            DECIMAL(10,2)       NULL,
+GOLD_DISCOUNT                           DECIMAL(10,2)       NULL,
+BRAND_PACK_DISCOUNT                     DECIMAL(10,2)       NULL,
+
+TOTAL_AMOUNT                            DECIMAL(10,2)       NULL,
+
+RATING                                  DECIMAL(2,1)        NULL,
+REVIEW                                  NVARCHAR(MAX)       NULL,
+
+CANCELLATION_REJECTION_REASON           NVARCHAR(1000)      NULL,
+
+RESTAURANT_COMPENSATION_CANCELLATION    DECIMAL(10,2)       NULL,
+RESTAURANT_PENALTY_REJECTION            DECIMAL(10,2)       NULL,
+
+CUSTOMER_COMPLAINT_TAG                  NVARCHAR(500)       NULL,
+
+CUSTOMER_ID                             NVARCHAR(128)       NOT NULL,
+ QUANTITY					 				DECIMAL(10,2)       NULL,
+WAITER_ID                            NVARCHAR(128)       NOT NULL,
+CHEF_ID                             NVARCHAR(128)       NOT NULL
 );

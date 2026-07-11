@@ -90,3 +90,16 @@ CUSTOMER_ID                             NVARCHAR(128)       NOT NULL,
 WAITER_ID                            NVARCHAR(128)       NOT NULL,
 CHEF_ID                             NVARCHAR(128)       NOT NULL
 );
+
+
+
+
+CREATE TABLE Transactional_Data.Employee
+(
+Employee_ID NVARCHAR(128)       NOT NULL, 
+Employee_Name NVARCHAR(128)       NOT NULL,
+Designation NVARCHAR(128)       NOT NULL, 
+Manager_ID NVARCHAR(128)  , 
+Manager_Name NVARCHAR(128)  , 
+Monthly_Salary NVARCHAR(128)       NOT NULL,
+Rating NVARCHAR(128)       NOT NULL);

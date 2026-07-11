@@ -1,10 +1,10 @@
 import pandas as pd
 
 # Read CSV
-csv_file = "C:\\Users\\Dell\\Documents\\Data-Vidhya-Projects\\TasteTrack Analytics - Enterprise Restaurants Lakehouse\\Datasets\\restaurants_order.csv"
+csv_file = "C:\\Users\\Dell\\Documents\\Data-Vidhya-Projects\\TasteTrack Analytics - Enterprise Restaurants Lakehouse\\Datasets\\Employees.csv"
 df = pd.read_csv(csv_file)
 # Table name
-table_name = "resturants_order"
+table_name = "Employee"
 
 # Column names
 columns = ", ".join(df.columns)

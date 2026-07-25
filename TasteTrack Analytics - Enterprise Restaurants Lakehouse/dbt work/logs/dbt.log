@@ -1,0 +1,91 @@
+[0m12:49:15.808820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B2FC71A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B2C74AE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B30743750>]}
+
+
+============================== 12:49:15.837377 | b6988614-add0-4396-bfdd-6854e24d1399 ==============================
+[0m12:49:15.837377 [info ] [MainThread]: Running with dbt=1.11.12
+[0m12:49:15.841539 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Dell\\.dbt', 'invocation_command': 'dbt init', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:49:16.021811 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\Dell\.dbt
+[0m12:49:43.665472 [debug] [MainThread]: Starter project path: C:\Users\Dell\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\include\starter_project
+[0m12:49:43.920370 [info ] [MainThread]: 
+Your new dbt project "databricks_connect" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:49:44.277258 [info ] [MainThread]: Setting up your profile.
+[0m12:50:22.354586 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m12:50:22.356000 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m12:50:22.356986 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m12:53:43.965589 [info ] [MainThread]: Profile databricks_connect written to C:\Users\Dell\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:53:43.971781 [debug] [MainThread]: Command `dbt init` succeeded at 12:53:43.971342 after 268.94 seconds
+[0m12:53:43.973252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B31EC0640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B31ECE450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B3C8EC5A0>]}
+[0m12:53:43.975347 [debug] [MainThread]: Flushing usage events
+[0m12:53:45.282256 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:54:02.647256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002442FA45A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002442C4DAE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244305234D0>]}
+
+
+============================== 12:54:02.674191 | 2610c851-488c-483b-a9d9-b4acb26d7480 ==============================
+[0m12:54:02.674191 [info ] [MainThread]: Running with dbt=1.11.12
+[0m12:54:02.678861 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Dell\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:54:02.887135 [info ] [MainThread]: dbt version: 1.11.12
+[0m12:54:02.890137 [info ] [MainThread]: python version: 3.13.2
+[0m12:54:02.892659 [info ] [MainThread]: python path: C:\Users\Dell\AppData\Local\Programs\Python\Python313\python.exe
+[0m12:54:02.894917 [info ] [MainThread]: os info: Windows-10-10.0.19044-SP0
+[0m12:54:07.928203 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m12:54:07.929362 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m12:54:07.930289 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m12:54:10.866172 [info ] [MainThread]: Using profiles dir at C:\Users\Dell\.dbt
+[0m12:54:10.867893 [info ] [MainThread]: Using profiles.yml file at C:\Users\Dell\.dbt\profiles.yml
+[0m12:54:10.869054 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Dell\Documents\Data-Vidhya-Projects\TasteTrack Analytics - Enterprise Restaurants Lakehouse\dbt work\dbt_project.yml
+[0m12:54:10.870445 [info ] [MainThread]: adapter type: databricks
+[0m12:54:10.871913 [info ] [MainThread]: adapter version: 1.12.2
+[0m12:54:10.874537 [info ] [MainThread]: Configuration:
+[0m12:54:10.876655 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:54:10.878731 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:54:10.881168 [info ] [MainThread]: Required dependencies:
+[0m12:54:10.892502 [debug] [MainThread]: Executing "git --help"
+[0m12:54:11.048748 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   reset      Reset current HEAD to the specified state\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   branch     List, create, or delete branches\n   checkout   Switch branches or restore working tree files\n   commit     Record changes to the repository\n   diff       Show changes between commits, commit and working tree, etc\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\n""
+[0m12:54:11.052515 [debug] [MainThread]: STDERR: "b''"
+[0m12:54:11.055147 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:54:11.057392 [info ] [MainThread]: Connection:
+[0m12:54:11.058952 [info ] [MainThread]:   host: https://dbc-f97f6179-92d7.cloud.databricks.com/
+[0m12:54:11.060560 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/b710190adad8c9cf
+[0m12:54:11.061852 [info ] [MainThread]:   catalog: hive_metastore
+[0m12:54:11.063683 [info ] [MainThread]:   schema: adf
+[0m12:54:11.071949 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m12:54:12.775679 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m12:54:12.777513 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m12:54:21.382336 [info ] [MainThread]: Databricks adapter: SPOG discovery probe to 'https://https://dbc-f97f6179-92d7.cloud.databricks.com//.well-known/databricks-config' failed after 3 attempts (last error: HTTPSConnectionPool(host='https', port=443): Max retries exceeded with url: /dbc-f97f6179-92d7.cloud.databricks.com//.well-known/databricks-config (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002443C725D10>: Failed to resolve 'https' ([Errno 11001] getaddrinfo failed)"))). Proceeding as a non-SPOG host. If https://dbc-f97f6179-92d7.cloud.databricks.com/ is a SPOG (unified) workspace, routing errors may follow; verify network reachability to /.well-known/databricks-config.
+[0m12:54:21.414447 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type=None): no
+[0m12:54:21.422405 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m12:54:21.436147 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.3.0 (supported)
+[0m12:54:21.442382 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.117.0 (supported)
+[0m12:54:21.451433 [debug] [MainThread]: Using databricks connection "debug"
+[0m12:54:21.453765 [debug] [MainThread]: On debug: select 1 as id
+[0m12:54:21.456903 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:54:25.857978 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f18667-885b-11d6-92fe-0427c3bc88fe) - Created
+[0m12:54:33.864081 [debug] [MainThread]: SQL status: OK in 12.410 seconds
+[0m12:54:33.866878 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f18667-885b-11d6-92fe-0427c3bc88fe, command-id=01f18667-8982-1e17-bb43-a23054cbd836) - Closing
+[0m12:54:34.295739 [debug] [MainThread]: On debug: Close
+[0m12:54:34.298072 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f18667-885b-11d6-92fe-0427c3bc88fe) - Closing
+[0m12:54:34.676557 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:54:34.680977 [info ] [MainThread]: [31m1 check failed:[0m
+[0m12:54:34.684832 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Dell\Documents\Data-Vidhya-Projects\TasteTrack Analytics - Enterprise Restaurants Lakehouse\dbt work\dbt_project.yml> not found
+
+[0m12:54:34.694399 [debug] [MainThread]: Command `dbt debug` failed at 12:54:34.693546 after 33.97 seconds
+[0m12:54:34.696974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002443C6376F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002443C6E2E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002443C6F06B0>]}
+[0m12:54:34.699117 [debug] [MainThread]: Flushing usage events
+[0m12:54:35.703348 [debug] [MainThread]: An error was encountered while trying to flush usage events

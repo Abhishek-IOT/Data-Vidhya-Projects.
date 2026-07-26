@@ -50,6 +50,6 @@ VALUES (
 
 {% do run_query(sql) %}
 
-{{ log("MERGE completed successfully.", info=True) }}
+{{ log("DIM RESTAURANT LOAD COMPLETED  completed successfully.", info=True) }}
 
 {% endmacro %}

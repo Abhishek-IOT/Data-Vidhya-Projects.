@@ -81,6 +81,6 @@ b.updated_user
 
 {% do run_query(sql) %}
 
-{{ log("MERGE completed successfully.", info=True) }}
+{{ log("DIM ORDER LOAD COMPLETED  completed successfully.", info=True) }}
 
 {% endmacro %}

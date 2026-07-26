@@ -27,3 +27,19 @@ restaurant_key string,
     updated_user string
 
 );
+
+
+
+create or replace table gold_layer.dim_employee(
+    EMPLOYEE_KEY string,
+EMPLOYEE_NAME string,
+SALARY decimal,
+BAND string,
+MANAGER string,
+RATING decimal,
+DESIGNATION string,
+is_active string,
+effective_from timestamp,
+effective_to timestamp
+
+);

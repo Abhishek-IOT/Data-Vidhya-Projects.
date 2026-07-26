@@ -14,7 +14,9 @@ MERGE INTO GOLD_LAYER.dim_employee as a using
     'Y' as is_active,
     current_timestamp() as effective_from,
     '2050-07-26T12:10:41.480+00:00' as effective_to,
-    md5(concat(EMPLOYEE_NAME,string(SALARY),band,manager,rating,DESIGNATION)) as hashdiff
+    md5(concat(EMPLOYEE_NAME,string(SALARY),band,manager,rating,DESIGNATION)) as hashdiff,
+    current_timestamp as created_at,
+    'DBT' AS created_user
     from silver_layer.employee
 )
 as b on a.EMPLOYEE_KEY=b.EMPLOYEE_KEY and a.hashdiff<>b.hashdiff
@@ -42,7 +44,9 @@ DESIGNATION,
 is_active,
 effective_from,
 effective_to,
-hashdiff
+hashdiff,
+created_at,
+created_user
 )
 VALUES
 (
@@ -56,9 +60,9 @@ b.DESIGNATION,
 b.is_active,
 b.effective_from,
 b.effective_to,
-b.hashdiff
-);
-
+b.hashdiff,
+b.created_at,
+b.created_user
 {% endset %}
 
 {% do run_query(sql) %}

@@ -40,6 +40,22 @@ RATING decimal,
 DESIGNATION string,
 is_active string,
 effective_from timestamp,
-effective_to timestamp
+effective_to timestamp,
+createdat timestamp,
+created_user timestamp
 
+);
+
+
+create or replace table gold_layer.dim_menu 
+(
+ITEM_KEY string,
+ITEM_NAME string,
+ITEM_TYPE string,
+PRICE decimal,
+is_active string,
+effective_from timestamp,
+effective_to timestamp,
+createdat timestamp,
+created_user timestamp
 );

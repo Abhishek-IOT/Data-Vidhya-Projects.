@@ -11,6 +11,6 @@
 
 {% do run_query(sql) %}
 
-{{ log("DIM EMPLOYEE LOAD COMPLETED completed successfully.", info=True) }}
+{{ log("FACT SALES LOAD COMPLETED completed successfully.", info=True) }}
 
 {% endmacro %}

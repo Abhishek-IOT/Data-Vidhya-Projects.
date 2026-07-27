@@ -5,6 +5,7 @@
 MERGE INTO GOLD_LAYER.dim_employee as a using 
 (
  select md5(EMPLOYEE_NAME) as EMPLOYEE_KEY,
+ EMPLOYEE_ID,
     EMPLOYEE_NAME,
     Monthly_Salary AS SALARY,
     Salary_Band AS BAND,
@@ -23,6 +24,7 @@ as b on a.EMPLOYEE_KEY=b.EMPLOYEE_KEY and a.hashdiff<>b.hashdiff
 
 when matched then update 
 set 
+a.EMPLOYEE_ID=b.EMPLOYEE_ID
 a.EMPLOYEE_NAME=b.EMPLOYEE_NAME,
 a.SALARY=b.SALARY,
 a.BAND=b.band,
@@ -35,6 +37,7 @@ is_active='N',
 when not matched then INSERT
 (
 EMPLOYEE_KEY,
+EMPLOYEE_ID
 EMPLOYEE_NAME,
 SALARY,
 BAND,
@@ -51,6 +54,7 @@ created_user
 VALUES
 (
 b.EMPLOYEE_KEY,
+b.EMPLOYEE_ID,
 b.EMPLOYEE_NAME,
 b.SALARY,
 b.BAND,

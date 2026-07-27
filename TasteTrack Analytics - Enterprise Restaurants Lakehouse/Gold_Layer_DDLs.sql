@@ -33,6 +33,7 @@ restaurant_id string,
 
 create or replace table gold_layer.dim_employee(
     EMPLOYEE_KEY string,
+    employee_id string,
 EMPLOYEE_NAME string,
 SALARY decimal,
 BAND string,
@@ -66,7 +67,7 @@ created_user timestamp
 create table gold_layer.fact_sales
 (
 SALES_KEY string,
-RESTRAUNT_KEY string
+RESTRAUNT_KEY string,
 ORDER_KEY string,
 EMPLOYEE_KEY string,
 ITEM_KEY string,

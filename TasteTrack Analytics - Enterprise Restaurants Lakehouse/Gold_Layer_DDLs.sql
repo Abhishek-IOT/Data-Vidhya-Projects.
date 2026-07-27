@@ -63,13 +63,31 @@ created_user timestamp
 );
 
 
+-- For Loading Fact Table.
+CREATE OR REPlace table silver_layer.order_details as 
+select 
+RESTAURANT_ID,
+ORDER_ID,
+Waiter_ID,
+Chef_ID
+ from silver_layer.restaurant_orders
+union all
+select RESTAURANT_ID,
+ORDER_ID,
+'N/a' as waiter_id,
+'N' as chef_id
+from 
+silver_layer.restaurant_orders_online;
+
 
 create table gold_layer.fact_sales
 (
 SALES_KEY string,
 RESTRAUNT_KEY string,
 ORDER_KEY string,
-EMPLOYEE_KEY string,
+EMPLOYEE_KEY_CHEF string,
+EMPLOYEE_KEY_WAITER string,
+EMPLOYEE_KEY_MANAGER string,
 ITEM_KEY string,
 BILL_SUBTOTAL decimal,
 PACKAGING_CHARGES decimal,

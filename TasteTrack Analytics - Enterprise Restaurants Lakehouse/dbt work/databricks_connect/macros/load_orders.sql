@@ -6,6 +6,7 @@ MERGE INTO adf.gold_layer.dim_restaurants AS A
 USING (
     SELECT
         md5(concat(Restaurant_Name, Subzone, City)) AS restaurant_key,
+        Restaurant_id,
         Restaurant_Name,
         Subzone,
         current_timestamp() AS created_at,
@@ -20,6 +21,7 @@ ON B.restaurant_key = A.restaurant_key
 WHEN MATCHED THEN
 UPDATE SET
     A.Restaurant_Name = B.Restaurant_Name,
+    A.Restaurant_id=B.Restaurant_id,
     A.Subzone = B.Subzone,
     A.City = B.City,
     A.updated_at = current_timestamp()
@@ -27,6 +29,7 @@ UPDATE SET
 WHEN NOT MATCHED THEN
 INSERT (
     restaurant_key,
+    Restaurant_id
     Restaurant_Name,
     Subzone,
     City,
@@ -37,6 +40,8 @@ INSERT (
 )
 VALUES (
     B.restaurant_key,
+    B.Restaurant_id,
+
     B.Restaurant_Name,
     B.Subzone,
     B.City,

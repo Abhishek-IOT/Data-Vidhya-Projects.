@@ -18,6 +18,7 @@ DELIVERY_PARTNER string,
 
 create or replace table GOLD_LAYER.dim_restaurants (
 restaurant_key string,
+restaurant_id string,
     Restaurant_Name string,
     Subzone string,
     City string,
@@ -58,4 +59,27 @@ effective_from timestamp,
 effective_to timestamp,
 createdat timestamp,
 created_user timestamp
+);
+
+
+
+create table gold_layer.fact_sales
+(
+SALES_KEY string,
+RESTRAUNT_KEY string
+ORDER_KEY string,
+EMPLOYEE_KEY string,
+ITEM_KEY string,
+BILL_SUBTOTAL decimal,
+PACKAGING_CHARGES decimal,
+RESTAURANT_DISCOUNT_PROMO decimal,
+RESTAURANT_DISCOUNT_FLAT_OFF decimal,
+GOLD_DISCOUNT decimal,
+BRAND_PACK_DISCOUNT decimal,
+TOTAL_AMOUNT decimal,
+DISTANCE_KM decimal,
+ created_at timestamp,
+    created_user string,
+    updated_at timestamp,
+    updated_user string
 );

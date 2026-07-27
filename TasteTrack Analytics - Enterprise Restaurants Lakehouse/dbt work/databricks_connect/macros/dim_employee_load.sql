@@ -63,6 +63,7 @@ b.effective_to,
 b.hashdiff,
 b.created_at,
 b.created_user
+)
 {% endset %}
 
 {% do run_query(sql) %}

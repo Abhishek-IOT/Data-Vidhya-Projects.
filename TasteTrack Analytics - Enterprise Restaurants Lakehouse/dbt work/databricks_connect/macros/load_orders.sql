@@ -29,7 +29,7 @@ UPDATE SET
 WHEN NOT MATCHED THEN
 INSERT (
     restaurant_key,
-    Restaurant_id
+    Restaurant_id,
     Restaurant_Name,
     Subzone,
     City,

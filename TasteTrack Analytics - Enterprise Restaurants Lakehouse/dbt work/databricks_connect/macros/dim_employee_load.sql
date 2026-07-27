@@ -24,7 +24,7 @@ as b on a.EMPLOYEE_KEY=b.EMPLOYEE_KEY and a.hashdiff<>b.hashdiff
 
 when matched then update 
 set 
-a.EMPLOYEE_ID=b.EMPLOYEE_ID
+a.EMPLOYEE_ID=b.EMPLOYEE_ID,
 a.EMPLOYEE_NAME=b.EMPLOYEE_NAME,
 a.SALARY=b.SALARY,
 a.BAND=b.band,
@@ -37,7 +37,7 @@ is_active='N',
 when not matched then INSERT
 (
 EMPLOYEE_KEY,
-EMPLOYEE_ID
+EMPLOYEE_ID,
 EMPLOYEE_NAME,
 SALARY,
 BAND,
@@ -47,9 +47,9 @@ DESIGNATION,
 is_active,
 effective_from,
 effective_to,
-hashdiff,
 created_at,
-created_user
+created_user,
+hashdiff
 )
 VALUES
 (
@@ -64,10 +64,12 @@ b.DESIGNATION,
 b.is_active,
 b.effective_from,
 b.effective_to,
-b.hashdiff,
 b.created_at,
-b.created_user
+b.created_user,
+b.hashdiff
 )
+;
+
 {% endset %}
 
 {% do run_query(sql) %}

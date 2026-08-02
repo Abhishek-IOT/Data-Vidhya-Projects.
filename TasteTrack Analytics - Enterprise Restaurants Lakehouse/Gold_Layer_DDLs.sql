@@ -161,3 +161,16 @@ DISTANCE_KM decimal,
     updated_at timestamp,
     updated_user string
 );
+
+
+CREATE OR REPLACE TABLE gold_layer.DIM_DATE (
+    DATE_KEY               string,
+    FULL_DATE              DATE,
+    DAY_Number               STRING,
+    MONTH_NUMBER           STRING,
+    MONTH_NAME             STRING,
+    QUARTER_NUMBER         String,
+    YEAR_NUMBER                   STRING,
+    LOAD_DATE              TIMESTAMP
+
+);

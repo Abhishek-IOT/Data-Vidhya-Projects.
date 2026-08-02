@@ -1,4 +1,4 @@
-{% macro dim_employee_load() %}
+{% macro dim_date_load() %}
 
 {% set sql %}
 

@@ -6,7 +6,7 @@
 
 INSERT INTO gold_layer.DIM_DATE
 SELECT
-    CAST(date_format(FULL_DATE, 'yyyyMMdd') AS BIGINT) AS DATE_KEY,
+    CAST(date_format(FULL_DATE, 'yyyy-MM-dd') AS BIGINT) AS DATE_KEY,
     FULL_DATE,
     date_format(FULL_DATE, 'dd') AS DAY_NUMBER,
     month(FULL_DATE) AS MONTH_NUMBER,

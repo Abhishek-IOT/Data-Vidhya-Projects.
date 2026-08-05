@@ -1,0 +1,1 @@
+select * from gold_layer.dim_employee where is_active='Y';

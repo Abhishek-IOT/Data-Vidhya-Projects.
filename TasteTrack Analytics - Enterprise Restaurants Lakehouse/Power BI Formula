@@ -1,0 +1,9 @@
+Chef Count = 
+CALCULATE(
+    COUNTROWS(Employees),
+    Employees[Designation] = "Chef"
+)
+
+
+
+Show_Designation = IF(HASONEVALUE(Employee[EMPLOYEE_NAME]), SELECTEDVALUE(Employee[DESIGNATION]), "Not Present")

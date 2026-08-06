@@ -1,5 +1,0 @@
-Chef Count = 
-CALCULATE(
-    COUNTROWS(Employees),
-    Employees[Designation] = "Chef"
-)

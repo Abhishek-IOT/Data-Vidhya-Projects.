@@ -14,3 +14,10 @@
 - PowerBI
 - Data Modeling
 
+Data Model Gold Layer :
+
+![alt text](<Data Model.png>)
+
+# Report : 
+
+![alt text](image.png)

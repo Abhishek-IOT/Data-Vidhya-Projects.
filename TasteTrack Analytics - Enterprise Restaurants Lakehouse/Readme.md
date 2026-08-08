@@ -3,3 +3,14 @@
 # Architecture :
 
 ![alt text](Architecture-1.png)
+
+# What we will learn from this project :
+
+- Azure SQL Database
+- Azure Databricks
+- Pyspark
+- Delta Lake
+- DBT
+- PowerBI
+- Data Modeling
+
